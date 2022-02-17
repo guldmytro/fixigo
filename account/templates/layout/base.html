@@ -1,0 +1,328 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Главная{% endblock %} - Fixigo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static '/css/animxyz.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core@0.3.0/dist/animxyz.min.css">
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <link rel="stylesheet" href="{% static '/css/media.css' %}">
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        <header class="header" id="header">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center pos_rel">
+                    <div class="col-auto d-flex align-items-center">
+                        <a href="/" class="custom__logo ">
+                            <img src="{% static '/img/logo.svg' %}" alt="" />
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <div class="
+                                  my_row my_row_menu
+                                  align-items-center
+                                  justify-content-between
+                                ">
+                            <button class="menu__close ms-auto"></button>
+                        </div>
+                        <nav class="nav">
+                            <ul class="nav__list">
+                                <li class="nav__item">
+                                    <a href="/about.php">
+                                        О нас
+                                    </a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="/tarif.php">
+                                        Тарифные планы
+                                    </a>
+
+                                </li>
+                                <li class="nav__item">
+                                    <a href="/service.php">
+                                        Сервисам
+                                    </a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="/blog.php">
+                                        Блог
+                                    </a>
+                                </li>
+                                <li class="nav__item">
+                                    <a href="/contacts.php">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="col-auto phones pos_rel d-flex d-flex d-xl-none mb_25 flex-column align-items-center">
+                            <p class="phones__wrap mb-0">
+                                <a href="tel:+380681423488" class="header__contact">
+                                    +38 (068) 142-34-88
+                                </a>
+                            </p>
+                            <p class="work__time mb-0">
+                                Пн- Вс с 9.00 до 21.00
+                            </p>
+                        </div>
+                        <a href="mailto:Fixigo@mail.ru" class="header__email mb_25 justify-content-center d-flex d-xl-none ">
+                            <div class="contact__icon d-flex align-items-center justify-content-center me-2">
+                                <svg class="" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.332764 14.5418L6.17039 7.20229L0.332764 3.63379V14.5418Z" fill="#00729E" />
+                                    <path d="M14.9375 7.71436L10.9877 10.1466L7.03103 7.72786L0.998779 15.3126H20.9754L14.9375 7.71436Z"
+                                          fill="#00729E" />
+                                    <path d="M10.9865 8.972L21.6673 2.39413V0.6875H0.332764V2.4605L10.9865 8.972Z" fill="#00729E" />
+                                    <path d="M15.7959 7.18557L21.6673 14.5735V3.56982L15.7959 7.18557Z" fill="#00729E" />
+                                </svg>
+                            </div>
+
+
+                            Fixigo@mail.ru
+                        </a>
+                    </div>
+                    <a href="mailto:Fixigo@mail.ru" class="header__email d-none d-md-flex">
+                        <div class="contact__icon d-flex align-items-center justify-content-center me-2">
+                            <svg class="" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.332764 14.5418L6.17039 7.20229L0.332764 3.63379V14.5418Z" fill="#00729E" />
+                                <path d="M14.9375 7.71436L10.9877 10.1466L7.03103 7.72786L0.998779 15.3126H20.9754L14.9375 7.71436Z"
+                                      fill="#00729E" />
+                                <path d="M10.9865 8.972L21.6673 2.39413V0.6875H0.332764V2.4605L10.9865 8.972Z" fill="#00729E" />
+                                <path d="M15.7959 7.18557L21.6673 14.5735V3.56982L15.7959 7.18557Z" fill="#00729E" />
+                            </svg>
+                        </div>
+
+
+                        Fixigo@mail.ru
+                    </a>
+                    <div class="user">
+                        <div class="contact__icon contact__icon_user d-flex align-items-center justify-content-center">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M18.7264 14.4119C18.0606 13.3971 16.6306 12.6287 13.7819 11.098L13.4857 10.9387L10.0443 14.4112C9.95371 14.5026 9.83038 14.554 9.70169 14.5542C9.70149 14.5542 9.70128 14.5542 9.70107 14.5542C9.57269 14.5542 9.44947 14.503 9.35873 14.412L5.89961 10.9382C5.6177 11.0894 5.34867 11.233 5.09181 11.3702C2.48824 12.7603 1.18146 13.4582 0.581944 14.4294C-0.0135482 15.394 -0.00818576 16.7993 0.00264138 19.5992C0.00326007 19.7289 0.00367247 19.8614 0.00418805 19.9968H19.394C19.3936 19.8659 19.3933 19.7379 19.3929 19.6125C19.3849 16.814 19.3807 15.4092 18.7264 14.4119ZM9.692 17.7152C9.18106 17.7152 8.76643 17.3026 8.76643 16.7938C8.76643 16.2848 9.18106 15.8719 9.692 15.8719C10.2037 15.8719 10.6181 16.2849 10.6181 16.7938C10.6182 17.3026 10.2037 17.7152 9.692 17.7152Z"
+                                      fill="#00729E" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M9.78132 11.0166C12.72 11.0166 14.323 6.65106 14.323 4.40819C14.323 1.97755 12.2857 0 9.78132 0C7.27654 0 5.23877 1.97755 5.23877 4.40819C5.23887 6.65106 6.84211 11.0166 9.78132 11.0166Z"
+                                      fill="#00729E" />
+                            </svg>
+
+                        </div>
+                        <div class="user__popup">
+                            <button  class="open__form user__enter">
+                                Войти/Регистрация
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-auto phones pos_rel d-none d-sm-flex flex-column align-items-end">
+                        <p class="phones__wrap mb-0">
+                            <a href="tel:+380681423488" class="header__contact">
+                                +38 (068) 142-34-88
+                            </a>
+                        </p>
+                        <p class="work__time mb-0">
+                            Пн- Вс с 9.00 до 21.00
+                        </p>
+                    </div>
+                    <button class="
+                      menu__burger
+                      me-xl-4 me-xxl-5
+                      d-block d-xl-none
+                      align-items-center
+                    ">
+                        <span class="burger__line burger__line_first"></span>
+                        <span class="burger__line burger__line_second"></span>
+                        <span class="burger__line burger__line_third"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        {% block content %}{% endblock %}
+    </div>
+    <!-- /.content -->
+
+    <footer class="footer">
+        <div class="container mb_30">
+            <div class="d-flex footer__row justify-content-between align-items-center pos_rel">
+                <div class="col-md-auto d-flex align-items-center">
+                    <a href="#" class="custom__logo ">
+                        <img src="{% static '/img/footer_logo.svg' %}" alt="" />
+                    </a>
+                </div>
+                <div class="menu__footer d-none d-xl-block">
+                    <div class="
+                              my_row my_row_menu
+                              align-items-center
+                              justify-content-between
+                            ">
+                        <button class="menu__close ms-auto"></button>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="/about.php" target="_blank" rel="noopener noreferrer">
+                                    О нас
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="/tarif.php" target="_blank" rel="noopener noreferrer">
+                                    Тарифные планы
+                                </a>
+
+                            </li>
+                            <li class="nav__item">
+                                <a href="/service.php" target="_blank" rel="noopener noreferrer">
+                                    Сервисам
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="/blog.php" target="_blank" rel="noopener noreferrer">
+                                    Блог
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="/contacts.php" target="_blank" rel="noopener noreferrer">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <a href="mailto:Fixigo@mail.ru" class="header__email d-flex ">
+                    <div class="contact__icon d-flex align-items-center justify-content-center me-2">
+                        <svg class="" width="22" height="16" viewBox="0 0 22 16" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.332764 14.5418L6.17039 7.20229L0.332764 3.63379V14.5418Z" fill="#00729E" />
+                            <path
+                                    d="M14.9375 7.71436L10.9877 10.1466L7.03103 7.72786L0.998779 15.3126H20.9754L14.9375 7.71436Z"
+                                    fill="#00729E" />
+                            <path d="M10.9865 8.972L21.6673 2.39413V0.6875H0.332764V2.4605L10.9865 8.972Z"
+                                  fill="#00729E" />
+                            <path d="M15.7959 7.18557L21.6673 14.5735V3.56982L15.7959 7.18557Z" fill="#00729E" />
+                        </svg>
+                    </div>
+
+
+                    Fixigo@mail.ru
+                </a>
+
+
+                <div class="col-auto phones pos_rel d-flex align-items-end">
+                    <div class="contact__icon d-flex align-items-center justify-content-center me-2">
+                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.4799 13.5849L13.3525 15.2476L17.4261 20.4595L19.5534 18.7969L15.4799 13.5849Z"
+                                  fill="#00729E" />
+                            <path
+                                    d="M16.3273 21.3193L12.2536 16.1072C12.2536 16.1072 9.59751 15.4851 7.70526 13.0652C5.81413 10.6453 5.85238 7.9172 5.85238 7.9172L1.77876 2.70508C1.77876 2.70508 -2.08112 8.23445 3.97363 15.9812C10.0284 23.728 16.3273 21.3193 16.3273 21.3193Z"
+                                    fill="#00729E" />
+                            <path d="M5.00379 0.18402L2.87646 1.84668L6.94998 7.05864L9.07731 5.39598L5.00379 0.18402Z"
+                                  fill="#00729E" />
+                        </svg>
+
+                    </div>
+                    <div class="d-flex flex-column align-items-end">
+                        <p class="phones__wrap mb-0">
+                            <a href="tel:+380681423488" class="header__contact">
+                                +38 (068) 142-34-88
+                            </a>
+                        </p>
+                        <p class="work__time mb-0">
+                            Пн- Вс с 9.00 до 21.00
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex align-items-center flex-wrap justify-content-center">
+                <p class="copyright c_white">
+                    &copy;Fixigo, 2021. Все права защищены
+                </p>
+                <a href="http://" class="conditions">
+                    Условия подписки
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- /.footer -->
+</div>
+<!-- /.wrapper -->
+<div class="popup consult_review">
+    <div class="popup__content">
+            <span class="close_popup">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L19 19" stroke="black" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                    <path d="M1 19L19 1" stroke="black" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                </svg>
+            </span>
+        <div class="section__offer text_center">
+            <h2 class="section__title  text_center mb_20">
+                Оставить отзыв
+            </h2>
+            <div class="form__wrap form__wrap_popup">
+                <div class="input__group input__group_name">
+                    <input type="text" name="name" class="order__input order__input_name" />
+                    <p class="place_span">Имя</p>
+                </div>
+
+                <div class="input__group input__group_message">
+                    <textarea name="" class="order__input order__input_message"></textarea>
+                    <p class="place_span">Текст отзыва</p>
+                </div>
+
+                <label class="checkbox__wrap d-flex align-items-center mb_20">
+                        <span class="wpcf7-form-control-wrap acceptance-750">
+                            <span class="wpcf7-form-control wpcf7-acceptance">
+                                <span class="wpcf7-list-item">
+                                    <input type="checkbox" name="acceptance-751" value="1" class="check_input">
+                                </span>
+                            </span>
+                        </span>
+                    <span class="checkbox__text mb-0 fz_16">Даю согласие на обработку моих персональных данных
+                        </span>
+                </label>
+                <button class="btn popup__btn">
+                    <span class="effect__bg"></span>
+                    <span>
+                            Отправить
+                        </span>
+                    <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round">
+                        </path>
+                        <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round">
+                        </path>
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sidebar__bg"></div>
+
+<script src="{% static '/js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static '/js/jquery.maskedinput.js' %}"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+<script src="{% static '/js/main.js' %}"></script>
+</body>
+</html>

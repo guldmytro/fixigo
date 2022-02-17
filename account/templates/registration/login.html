@@ -1,0 +1,70 @@
+{% extends 'layout/base.html' %}
+{% block title %}Войти{% endblock %}
+{% block content %}
+    <section class="enter pb_100">
+        <div class="container">
+            <div class="enter__wrap enter__wrap_registration">
+                <h2 class="section__title  text_center mb_10">
+                    Вход в личный кабинет
+                </h2>
+
+                <form class="form__wrap form__wrap_popup form-login" action="." method="post">
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                                <li class="messages__item{% if message.tags %} {{ message.tags }}"{% endif %}>
+                                    {{ message }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <div class="input__group input__group_email">
+                        {{ login_form.email }}
+                        <p class="place_span">{{ login_form.email.label }}</p>
+                        {{ login_form.email.errors }}
+                    </div>
+                    <div class="input__group input__group_phone">
+                        {{ login_form.password }}
+                        <p class="place_span">{{ login_form.password.label }}</p>
+                        {{ login_form.password.errors }}
+                    </div>
+
+                    <div class="popup__option mb_30 d-flex justify-content-evenly">
+                        <label class="checkbox__wrap d-flex align-items-center">
+                                <span class="wpcf7-form-control-wrap acceptance-750">
+                                    <span class="wpcf7-form-control wpcf7-acceptance">
+                                        <span class="wpcf7-list-item">
+                                            {{ login_form.remember }}
+                                        </span>
+                                    </span>
+                                </span>
+                            <span class="checkbox__text mb-0 fz_16">Запомнить меня</span>
+                        </label>
+                        <a href="#" class="fz_16 c_dark">
+                            Забыли пароль?
+                        </a>
+                    </div>
+                    {% csrf_token %}
+                    <button class="btn popup__btn mb_30" type="submit">
+                        <span class="effect__bg"></span>
+                        <span>Войти</span>
+                        <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round">
+                            </path>
+                            <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="reg-wrapper">
+                        <a href="/registration.php" class="register__link text_center">
+                            Зарегистрироваться
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

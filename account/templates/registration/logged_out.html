@@ -1,0 +1,18 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}Выход{% endblock %}
+
+{% block content %}
+    <section class="enter pb_100">
+        <div class="container">
+            <div class="enter__wrap enter__wrap_registration">
+                <h1 class="section__title  text_center mb_10">
+                    Вы вышли.
+                </h1>
+                <p class="logout-subtitle">
+                    Вы можете снова <a href="{% url 'login' %}">войти</a> или перейти на <a href="{% url 'page:home' %}">главную</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

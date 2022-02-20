@@ -401,6 +401,9 @@ header {
 
 .messages {
     margin: 10px 0 20px;
+    width: 100%;
+    display: grid;
+    gap: 10px;
 }
 
 .messages__item {
@@ -421,6 +424,10 @@ header {
     background-color: #66ffb2;
 }
 
+.help-text {
+    margin: 0 0 30px;
+}
+
 .errorlist {
     margin: 8px 0 12px;
     color: red;
@@ -429,6 +436,13 @@ header {
 .logout-subtitle {
     text-align: center;
     padding: 40px 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+.px-2 {
+    padding: 0 30px;
 }
 @media screen and (min-width: 1200px) {
   .menu-item-has-children:hover .sub-menu {
@@ -1976,7 +1990,7 @@ svg path {
   min-height: 480px;
 }
 .enter__wrap_registration {
-  padding-top: 120px;
+  padding-top: 130px;
   padding-bottom: 70px;
 }
 .enter__wrap_confirmation {

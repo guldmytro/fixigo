@@ -1,0 +1,84 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+    <section class="enter pb_100">
+        <div class="container">
+            <div class="enter__wrap enter__wrap_registration">
+                <h1 class="section__title text_center mb_30">
+                    Регистрация
+                </h1>
+                <div class="form__wrap form__wrap_registration">
+
+                    <div class="input__group input__group_name">
+                        <input type="text" name="name" class="order__input order__input_name" />
+                        <p class="place_span">ФИО</p>
+                    </div>
+                    <div class="input__group input__group_name">
+                        <input type="email" name="name" class="order__input order__input_name" />
+                        <p class="place_span">E-mail</p>
+                    </div>
+                    <div class="input__group input__group_phone">
+                        <input type="tel" name="name" class="order__input order__input_phone" />
+                        <p class="place_span">Телефон</p>
+                    </div>
+                    <div class="input__group input__group_city">
+                        <input type="text" name="city" class="order__input order__input_city" />
+                        <p class="place_span">Город</p>
+                    </div>
+                    <div class="input__group input__group_street">
+                        <input type="text" name="street" class="order__input order__input_street" />
+                        <p class="place_span">Улица</p>
+                    </div>
+                    <div class="input__group input__group_house">
+                        <input type="text" name="house" class="order__input order__input_house" />
+                        <p class="place_span">Дом</p>
+                    </div>
+                    <div class="input__group input__group_flat">
+                        <input type="number" name="flat" class="order__input order__input_flat" />
+                        <p class="place_span">Квартира</p>
+                    </div>
+
+
+                    <div class="input__group input__group_pass">
+                        <input type="password" name="pass656" class="order__input order__input_pass" />
+                        <p class="place_span">Пароль</p>
+                    </div>
+                    <div class="input__group input__group_pass">
+                        <input type="password" name="pass656" class="order__input order__input_pass" />
+                        <p class="place_span">Повторить пароль</p>
+                    </div>
+                    <div class="popup__option mb_30 d-flex justify-content-evenly">
+                        <label class="checkbox__wrap d-flex align-items-center">
+                            <span class="wpcf7-form-control-wrap acceptance-750">
+                                <span class="wpcf7-form-control wpcf7-acceptance">
+                                    <span class="wpcf7-list-item">
+                                        <input type="checkbox" name="acceptance-751" value="1" class="check_input">
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="checkbox__text mb-0 fz_16">Даю согласие на обработку моих персональных данных
+                            </span>
+                        </label>
+                    </div>
+                    <button class="btn enter__btn mb_30">
+                        <span class="effect__bg"></span>
+                        <span>
+                            Зарегистрироваться
+                        </span>
+                        <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                            </path>
+                            <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

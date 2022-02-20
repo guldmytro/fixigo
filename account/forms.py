@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from .models import Profile
+from django.contrib.auth import authenticate
 
 
 class LoginForm(forms.Form):
@@ -25,8 +26,7 @@ class LoginForm(forms.Form):
 
 
 class RegistrationForm(forms.ModelForm):
-    username = forms.CharField(label='Логин')
-    email = forms.EmailField(label='E-mail')
+    email = forms.EmailField(label='E-mail*')
     password = forms.CharField(label='Пароль*',
                                min_length=8,
                                help_text='Пароль должен содержать как минимум 8 символов',
@@ -34,13 +34,19 @@ class RegistrationForm(forms.ModelForm):
                                    'placeholder': False
                                }))
     password2 = forms.CharField(label='Повторите пароль*',
+                                min_length=8,
                                 widget=forms.PasswordInput(attrs={
                                     'placeholder': False
                                 }))
+    agree = forms.BooleanField(label='Даю согласие на обработку моих персональных данных',
+                               initial=True,
+                               widget=forms.CheckboxInput(attrs={
+                                   'class': 'check_input'
+                               }))
 
     class Meta:
         model = User
-        fields = ('username', 'email')
+        fields = ('email',)
 
     def clean_email(self):
         cd = self.cleaned_data
@@ -57,6 +63,53 @@ class RegistrationForm(forms.ModelForm):
         if len(cd['password2']) < 8:
             raise forms.ValidationError('Минимальная длина пароля должна быть не меньше 8 символов')
         return cd['password2']
+
+
+class PasswordChangeForm(forms.Form):
+    old_password = forms.CharField(label='Старый пароль',
+                                   required=False,
+                                   widget=forms.PasswordInput(attrs={
+                                       'placeholder': False
+                                   }))
+    password = forms.CharField(label='Пароль',
+                               min_length=8,
+                               required=False,
+                               help_text='Пароль должен содержать как минимум 8 символов',
+                               widget=forms.PasswordInput(attrs={
+                                   'placeholder': False
+                               }))
+    password2 = forms.CharField(label='Повторите пароль',
+                                min_length=8,
+                                required=False,
+                                widget=forms.PasswordInput(attrs={
+                                    'placeholder': False
+                                }))
+
+    def __init__(self, *args, **kwargs):
+        """Passing request into form"""
+        self.request = kwargs.pop('request')
+        super().__init__(*args, **kwargs)
+
+    def clean_password2(self):
+        cd = self.cleaned_data
+        if cd['password'] != cd['password2']:
+            raise forms.ValidationError('Пароли не совпадают')
+        if len(cd['password2']) < 8 and len(cd['password2']) > 1:
+            raise forms.ValidationError('Минимальная длина пароля должна быть не меньше 8 символов')
+        return cd['password2']
+
+    def clean(self):
+        user = self.request.user
+        cd = self.cleaned_data
+        if len(cd['old_password']) > 0:
+            check_user = authenticate(self.request,
+                                      username=user.email,
+                                      password=cd['old_password'])
+            if check_user is not None:
+                if len(cd['password']) < 8:
+                    self.add_error('password', 'Длина нового пароля должна быть не меньше 8 символов')
+            else:
+                self.add_error('old_password', 'Неправильный пароль')
 
 
 class ProfileForm(forms.ModelForm):
@@ -81,6 +134,7 @@ class ProfileForm(forms.ModelForm):
                                 'placeholder': False
                             }))
     apartment = forms.IntegerField(min_value=1, max_value=999999, label='Квартира',
+                                   required=False,
                                    widget=forms.NumberInput(attrs={
                                        'placeholder': False
                                    }))
@@ -88,3 +142,4 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ('fullname', 'phone', 'city', 'street', 'house', 'apartment')
+

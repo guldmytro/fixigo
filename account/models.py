@@ -14,7 +14,7 @@ class Profile(models.Model):
     apartment = models.PositiveSmallIntegerField(verbose_name='Квартира', blank=True, null=True)
 
     def __str__(self):
-        return self.fullname
+        return f'Профиль {self.fullname}'
 
     class Meta:
         verbose_name = 'Профиль'

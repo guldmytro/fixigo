@@ -2102,7 +2102,6 @@ svg path {
 }
 .personal__link.current__item.personal__link_exit path,
 .personal__link.personal__link_exit:hover path {
-  /* fill: #0292d8; */
   stroke: #00baff;
 }
 .personal__wrap {
@@ -2556,44 +2555,7 @@ table a.ticket__link {
   top: 10px;
   width: 155px;
 }
-/* 
-    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-   Blog page end
-    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    */
 
-/* 
-    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-   work end
-    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    */
-
-/*
-
-    .mt_10 .mt_15 .mt_20 .mt_30 .mt_35 .mt_40 .mt_45 .mt_50 
-    .mb_10 .mb_15 .mb_20 .mb_25 .mb_30 .mb_35 .mb_40 .mb_45 .mb_50
-ff_futura
-    fw_light fw_normal  fw_medium fw_demi fw_bold fw_bolder fw_black fs_i 
-
-    fz_12 fz_14 fz_15 fz_16 fz_17  fz_18 fz_20 fz_22 fz_24 fz_25 fz_26 fz_28 fz_30 fz_36 fz_42 fz_48 fz_50 fz_60
-
-    pt_40 pt_50 pt_60 pt_80 pt_90 pt_100 pt_120
-    pb_20 pb_25 pb_30 pb_35 pb_40 pb_50 pb_60 pb_80 pb_90 pb_100 pb_120
-
-      c_dark  c_white  .c_orange c_blue c_blue_lt
-
-    text_center .text_left .text_right  tt_upper
-
-    .btn_xs .btn_small .btn_medium .btn_max btn_wh
-    
-    .bg_dark .bg_yel .bg_blue .bg_pink
-    */
-
-/* 
-    ////////////////////////////////////////
-    callback start
-    ////////////////////////////////////////
-    */
 .input__group {
   margin-bottom: 30px;
   position: relative;
@@ -2616,13 +2578,6 @@ ff_futura
   border-radius: 5px;
 }
 
-/* .order__input_name {
-  background: url(../img/user_icon_orange.png) no-repeat left center;
-}
-
-.order__input_phone {
-  background: url(../img/phone_icon_orange.png) no-repeat left center;
-} */
 .select_span,
 .place_span {
   color: #0a153d;
@@ -2640,11 +2595,6 @@ ff_futura
 
 .place_span span {
   color: #dc1118;
-}
-
-.select_span.fixed_span,
-.place_span.fixed_span {
-  /* opacity: 0; */
 }
 
 .order__input_message {
@@ -2784,10 +2734,6 @@ input.wpcf7-not-valid {
 .close_popup svg {
   width: 20px;
   height: 20px;
-}
-
-.open__form > * {
-  pointer-events: none;
 }
 
 .xyz_start {

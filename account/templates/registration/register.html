@@ -9,60 +9,69 @@
                 <h1 class="section__title text_center mb_30">
                     Регистрация
                 </h1>
-                <div class="form__wrap form__wrap_registration">
-
+                <form action="." method="post" class="form__wrap form__wrap_registration">
+                    {% include 'partials/form_messages.html' %}
+                    {% csrf_token %}
                     <div class="input__group input__group_name">
-                        <input type="text" name="name" class="order__input order__input_name" />
-                        <p class="place_span">ФИО</p>
+                        {{ profile_form.fullname }}
+                        <p class="place_span">{{ profile_form.fullname.label }}</p>
+                        {{ profile_form.fullname.errors }}
                     </div>
                     <div class="input__group input__group_name">
-                        <input type="email" name="name" class="order__input order__input_name" />
-                        <p class="place_span">E-mail</p>
+                        {{ register_form.email }}
+                        <p class="place_span">{{ register_form.email.label }}</p>
+                        {{ register_form.email.errors }}
+                    </div>
+                    <div class="input__group input__group_pass">
+                        {{ register_form.password }}
+                        <p class="place_span">{{ register_form.password.label }}</p>
+                        {{ register_form.password.errors }}
+                    </div>
+                    <div class="input__group input__group_pass">
+                        {{ register_form.password2 }}
+                        <p class="place_span">{{ register_form.password2.label }}</p>
+                        {{ register_form.password2.errors }}
                     </div>
                     <div class="input__group input__group_phone">
-                        <input type="tel" name="name" class="order__input order__input_phone" />
-                        <p class="place_span">Телефон</p>
+                        {{ profile_form.phone }}
+                        <p class="place_span">{{ profile_form.phone.label }}</p>
+                        {{ profile_form.phone.errors }}
                     </div>
                     <div class="input__group input__group_city">
-                        <input type="text" name="city" class="order__input order__input_city" />
-                        <p class="place_span">Город</p>
+                        {{ profile_form.city }}
+                        <p class="place_span">{{ profile_form.city.label }}</p>
+                        {{ profile_form.city.errors }}
                     </div>
                     <div class="input__group input__group_street">
-                        <input type="text" name="street" class="order__input order__input_street" />
-                        <p class="place_span">Улица</p>
+                        {{ profile_form.street }}
+                        <p class="place_span">{{ profile_form.street.label }}</p>
+                        {{ profile_form.street.errors }}
                     </div>
                     <div class="input__group input__group_house">
-                        <input type="text" name="house" class="order__input order__input_house" />
-                        <p class="place_span">Дом</p>
+                        {{ profile_form.house }}
+                        <p class="place_span">{{ profile_form.house.label }}</p>
+                        {{ profile_form.house.errors }}
                     </div>
                     <div class="input__group input__group_flat">
-                        <input type="number" name="flat" class="order__input order__input_flat" />
-                        <p class="place_span">Квартира</p>
-                    </div>
-
-
-                    <div class="input__group input__group_pass">
-                        <input type="password" name="pass656" class="order__input order__input_pass" />
-                        <p class="place_span">Пароль</p>
-                    </div>
-                    <div class="input__group input__group_pass">
-                        <input type="password" name="pass656" class="order__input order__input_pass" />
-                        <p class="place_span">Повторить пароль</p>
+                        {{ profile_form.apartment }}
+                        <p class="place_span">{{ profile_form.apartment.label }}</p>
+                        {{ profile_form.apartment.errors }}
                     </div>
                     <div class="popup__option mb_30 d-flex justify-content-evenly">
                         <label class="checkbox__wrap d-flex align-items-center">
                             <span class="wpcf7-form-control-wrap acceptance-750">
                                 <span class="wpcf7-form-control wpcf7-acceptance">
                                     <span class="wpcf7-list-item">
-                                        <input type="checkbox" name="acceptance-751" value="1" class="check_input">
+                                        {{ register_form.agree }}
                                     </span>
                                 </span>
                             </span>
-                            <span class="checkbox__text mb-0 fz_16">Даю согласие на обработку моих персональных данных
+                            <span class="checkbox__text mb-0 fz_16">
+                                {{ register_form.agree.label }}
                             </span>
                         </label>
                     </div>
-                    <button class="btn enter__btn mb_30">
+                    <button type="submit" class="btn enter__btn mb_30">
                         <span class="effect__bg"></span>
                         <span>
                             Зарегистрироваться
@@ -77,7 +86,7 @@
                             </path>
                         </svg>
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     </section>

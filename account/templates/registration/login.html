@@ -9,15 +9,7 @@
                 </h2>
 
                 <form class="form__wrap form__wrap_popup form-login" action="." method="post">
-                    {% if messages %}
-                        <ul class="messages">
-                            {% for message in messages %}
-                                <li class="messages__item{% if message.tags %} {{ message.tags }}"{% endif %}>
-                                    {{ message }}
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
+                    {% include 'partials/form_messages.html' %}
                     <div class="input__group input__group_email">
                         {{ login_form.email }}
                         <p class="place_span">{{ login_form.email.label }}</p>
@@ -59,7 +51,7 @@
                         </svg>
                     </button>
                     <div class="reg-wrapper">
-                        <a href="/registration.php" class="register__link text_center">
+                        <a href="{% url 'register' %}" class="register__link text_center">
                             Зарегистрироваться
                         </a>
                     </div>

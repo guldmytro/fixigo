@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from . import forms
+from .models import Profile
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -40,11 +41,14 @@ def register(request):
         if register_form.is_valid() and profile_form.is_valid():
             user = register_form.save(commit=False)
             user.set_password(register_form.cleaned_data['password'])
+            user.username = user.email
             user.save()
             profile = profile_form.save(commit=False)
             profile.user = user
             profile.save()
             return render(request, 'registration/register_done.html', {'user': user})
+        else:
+            messages.error(request, 'Исправьте, пожалуйста, ошибки формы')
     else:
         register_form = forms.RegistrationForm()
         profile_form = forms.ProfileForm()
@@ -55,4 +59,27 @@ def register(request):
 
 @login_required
 def profile(request):
-    return render(request, 'account/profile.html', {})
+    user = request.user
+    profile = get_object_or_404(Profile, user=user)
+    if request.method == 'POST':
+        password_change_form = forms.PasswordChangeForm(data=request.POST, request=request)
+        profile_form = forms.ProfileForm(data=request.POST, instance=profile)
+        if password_change_form.is_valid() and profile_form.is_valid():
+            profile_form.save()
+            cd = password_change_form.cleaned_data
+            if cd['password']:
+                user.set_password(cd['password'])
+                user.save()
+            if password_change_form.has_changed() or profile_form.has_changed():
+                messages.info(request, 'Ваши данные успешно обновлены')
+        else:
+            messages.error(request, 'Исправьте, пожалуйста, ошибки формы')
+    else:
+        password_change_form = forms.PasswordChangeForm(request=request)
+        profile_form = forms.ProfileForm(instance=profile)
+    context = {
+        'section': 'profile',
+        'password_change_form': password_change_form,
+        'profile_form': profile_form,
+    }
+    return render(request, 'account/profile.html', context)

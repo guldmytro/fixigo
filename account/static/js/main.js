@@ -209,14 +209,18 @@ const openSidebar = document.querySelector('.contact__icon_profile')
 const closeSidebar = document.querySelector('.close__sidebar')
 const sidebarBg = document.querySelector('.sidebar__bg')
 const sidebar = document.querySelector('.personal__sidebar')
-if (sidebar) {
+if (openSidebar) {
   openSidebar.onclick = () => {
     sidebar.classList.add('open')
     sidebarBg.classList.add('open')
   }
+}
+if (closeSidebar) {
   closeSidebar.onclick = () => {
     removeOpen()
   }
+}
+if (sidebarBg) {
   sidebarBg.onclick = () => {
     removeOpen()
   }  

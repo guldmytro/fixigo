@@ -1,0 +1,9 @@
+<tr>
+    <td>{{ ticket.created|date:'d.m.Y' }}</td>
+    <td>
+        <a href="{{ ticket.get_absolute_url }}" class="ticket__link">
+            {{ ticket.subject }}
+        </a>
+    </td>
+    <td>{{ ticket.status }}</td>
+</tr>

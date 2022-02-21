@@ -12,4 +12,10 @@ urlpatterns = [
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
     path('register/', views.register, name='register'),
     path('profile/', views.profile, name='profile'),
+    path('notifications/', views.notifications_list, name='notifications'),
+    path('notifications/<str:unread>/', views.notifications_list, name='notifications_unread'),
+    path('notification/<int:notification_id>/', views.notification_detail, name='notification_detail'),
+    path('tickets/', views.tickets_list, name='tickets_list'),
+    path('tickets/add/', views.tickets_add, name='tickets_add'),
+    path('ticket/<int:ticket_id>/', views.ticket_detail, name='ticket_detail'),
 ]

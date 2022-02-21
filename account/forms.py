@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from .models import Profile
+from ticket.models import Ticket
 from django.contrib.auth import authenticate
 
 
@@ -143,3 +144,39 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         fields = ('fullname', 'phone', 'city', 'street', 'house', 'apartment')
 
+
+class TicketForm(forms.ModelForm):
+    phone = forms.CharField(label='Телефон*',
+                            widget=forms.TextInput(attrs={
+                                'placeholder': False
+                            }))
+    city = forms.CharField(label='Город*',
+                           widget=forms.TextInput(attrs={
+                               'placeholder': False
+                           }))
+    street = forms.CharField(label='Улица*',
+                             widget=forms.TextInput(attrs={
+                                 'placeholder': False
+                             }))
+    house = forms.CharField(label='Дом*',
+                            widget=forms.TextInput(attrs={
+                                'placeholder': False
+                            }))
+    apartment = forms.IntegerField(min_value=1, max_value=999999, label='Квартира',
+                                   required=False,
+                                   widget=forms.NumberInput(attrs={
+                                       'placeholder': False
+                                   }))
+    subject = forms.CharField(label='Тема*',
+                              widget=forms.TextInput(attrs={
+                                  'placehoder': False
+                              }))
+    body = forms.CharField(label='Что у вас случилось?*',
+                           widget=forms.Textarea(attrs={
+                               'placeholder': False,
+                               'class': 'order__input order__input_message'
+                           }))
+
+    class Meta:
+        model = Ticket
+        fields = ('phone', 'city', 'street', 'house', 'apartment', 'subject', 'body')

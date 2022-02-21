@@ -1,0 +1,27 @@
+{% load static %}
+
+<div class="breadcrumbs pb_70">
+    <span>
+        <a href="{% url 'page:home' %}">
+            <span>Главная</span>
+        </a>
+    </span>
+    {% for breadcrumb in breadcrumbs %}
+        <img src="{% static '/img/menu_doted.svg' %}" alt="точка">
+        <span>
+            {% if breadcrumb.link %}
+                <a href="{{ breadcrumb.link }}" class="post post-page">
+                    <span>
+                        {{ breadcrumb.label }}
+                    </span>
+                </a>
+            {% else %}
+                <span class="post post-page current-item">
+                    {{ breadcrumb.label }}
+                </span>
+            {% endif %}
+        </span>
+    {% endfor %}
+    &nbsp;
+
+</div>

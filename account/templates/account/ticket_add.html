@@ -1,0 +1,63 @@
+{% extends 'layout/account.html' %}
+
+{% block title %}Добавить заявку{% endblock %}
+
+{% block account_content %}
+    <h2 class="profile__subtitle fz_22 fw_demi mb_35">
+        Новая заявка
+    </h2>
+    <form method="post" action="." class="form__wrap form__wrap_registration mx-0">
+        {% include 'partials/form_messages.html' %}
+        <div class="input__group input__group_phone">
+            {{ ticket_form.phone }}
+            <p class="place_span">{{ ticket_form.phone.label }}</p>
+            {{ ticket_form.phone.errors }}
+        </div>
+        <div class="input__group input__group_city">
+            {{ ticket_form.city }}
+            <p class="place_span">{{ ticket_form.city.label }}</p>
+            {{ ticket_form.city.errors }}
+        </div>
+        <div class="input__group input__group_street">
+            {{ ticket_form.street }}
+            <p class="place_span">{{ ticket_form.street.label }}</p>
+            {{ ticket_form.street.errors }}
+        </div>
+        <div class="input__group input__group_house">
+            {{ ticket_form.house }}
+            <p class="place_span">{{ ticket_form.house.label }}</p>
+            {{ ticket_form.house.errors }}
+        </div>
+        <div class="input__group input__group_flat">
+            {{ ticket_form.apartment }}
+            <p class="place_span">{{ ticket_form.apartment.label }}</p>
+            {{ ticket_form.apartment.errors }}
+        </div>
+        <div class="input__group input__group_street">
+            {{ ticket_form.subject }}
+            <p class="place_span">{{ ticket_form.subject.label }}</p>
+            {{ ticket_form.subject.errors }}
+        </div>
+        <div class="input__group input__group_message">
+            {{ ticket_form.body }}
+            <p class="place_span">{{ ticket_form.body.label }}</p>
+            {{ ticket_form.body.errors }}
+        </div>
+        {% csrf_token %}
+        <button type="submit" class="btn enter__btn mb_30">
+            <span class="effect__bg"></span>
+            <span>
+                Отправить
+            </span>
+            <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                </path>
+                <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                </path>
+            </svg>
+        </button>
+    </form>
+{% endblock %}

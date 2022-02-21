@@ -1,0 +1,13 @@
+<div class="ticket__title">
+    <p class="ticket__date ">
+        {{ ticket.created|date:'d.m.Y' }}
+    </p>
+    <p class="ticket__link">
+        {{ ticket.subject }}
+    </p>
+</div>
+<div class="ticket__content">
+    <div>
+        {{ ticket.body|linebreaks }}
+    </div>
+</div>

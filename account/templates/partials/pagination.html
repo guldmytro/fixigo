@@ -1,0 +1,39 @@
+{% if page.paginator.num_pages > 1 %}
+    <div class="message__pagination d-flex mt_30">
+        {% if page.has_previous %}
+            <a href="?page={{ page.previous_page_number }}" class="pag__link pag__link_prev">
+                <svg width="49" height="41" viewBox="0 0 49 41" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M37.9268 20.5006L48.6395 2.29049C48.8789 1.8829 48.8326 1.36747 48.5231 1.00948C48.2147 0.649336 47.7101 0.528567 47.2733 0.705406L0.898348 19.4762C0.481059 19.6466 0.208252 20.0499 0.208252 20.5006C0.208252 20.9513 0.481059 21.3546 0.898348 21.525L47.2733 40.2958C47.4071 40.3497 47.5483 40.3756 47.6874 40.3756C48.0012 40.3756 48.3096 40.2419 48.5231 39.9917C48.8326 39.6338 48.8789 39.1183 48.6395 38.7107L37.9268 20.5006ZM34.8644 25.079L35.6106 27.6087L22.8437 22.1569L34.8644 25.079ZM35.5416 19.3964L19.6002 19.9485L35.5416 14.3846V19.3964Z"
+                        fill="url(#paint0_linear_60_463)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_60_463" x1="47.262" y1="40.375" x2="-2.07746"
+                            y2="37.3003" gradientUnits="userSpaceOnUse">
+                            <stop class="stop_1" stop-color="#303C42" />
+                            <stop class="stop_2" offset="1" stop-color="#303C42" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </a>
+        {% endif %}
+        <span class="pag__link">Страница {{ page.number }} из {{ page.paginator.num_pages }}</span>
+        {% if page.has_next %}
+            <a href="?page={{ page.next_page_number }}" class="pag__link pag__link_next">
+                <svg width="49" height="41" viewBox="0 0 49 41" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11.073 20.4994L0.360206 38.7095C0.120827 39.1171 0.16719 39.6325 0.476662 39.9905C0.785049 40.3507 1.28969 40.4714 1.72641 40.2946L48.1014 21.5238C48.5187 21.3534 48.7915 20.9501 48.7915 20.4994C48.7915 20.0487 48.5187 19.6454 48.1014 19.475L1.72641 0.704182C1.59269 0.650269 1.45143 0.62439 1.31233 0.62439C0.998547 0.62439 0.690159 0.758099 0.476658 1.00826C0.167187 1.36625 0.120823 1.88167 0.360203 2.28927L11.073 20.4994ZM14.1353 15.921L13.3892 13.3913L26.1561 18.8431L14.1353 15.921ZM13.4582 21.6036L29.3996 21.0515L13.4582 26.6154L13.4582 21.6036Z"
+                        fill="url(#paint0_linear_60_464)"></path>
+                    <defs>
+                        <linearGradient id="paint0_linear_60_464" x1="47.262" y1="40.375" x2="-2.07746"
+                            y2="37.3003" gradientUnits="userSpaceOnUse">
+                            <stop class="stop_1" stop-color="#303C42"></stop>
+                            <stop class="stop_2" offset="1" stop-color="#303C42"></stop>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </a>
+        {% endif %}
+    </div>
+{% endif %}

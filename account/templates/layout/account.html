@@ -1,26 +1,12 @@
 {% extends 'layout/base.html' %}
 
-{% load static %}
-
 {% block content %}
 <section class="personal pb_100">
     <div class="container">
         <div class="d-flex personal__wrap">
             {% include 'partials/account_sidebar.html' %}
             <div class="profile__content">
-                <div class="breadcrumbs pb_70" typeof="BreadcrumbList" vocab="https://schema.org/">
-                    <span property="itemListElement" typeof="ListItem">
-                        <a href="{% url 'page:home' %}" class="home">
-                            <span property="name">Главная</span>
-                        </a>
-                    </span>
-                    &nbsp; <img src="{% static '/img/menu_doted.svg' %}" alt="точка"> &nbsp;
-                    <span>
-                        <span property="name" class="post post-page current-item">
-                            Профиль
-                        </span>
-                    </span>
-                </div>
+                {% include 'partials/breadcrumbs.html' %}
                 {% block account_content %}{% endblock %}
             </div>
         </div>

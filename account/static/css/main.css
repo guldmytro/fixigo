@@ -156,14 +156,13 @@ header,
 section,
 footer {
   position: relative;
-  /* z-index: 5; */
-  /* overflow-x: hidden; */
 }
 
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  column-gap: 4px;
 }
 .breadcrumbs span {
   font-size: 14px;
@@ -199,11 +198,6 @@ header {
 .fixed_header {
   z-index: 5000;
 }
-.fixed_header.header {
-  /* padding: 5px 0; */
-  /* background-color: #fff; */
-  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); */
-}
 
 .my_row {
   display: flex;
@@ -212,10 +206,6 @@ header {
 
 .my_row_menu {
   display: none;
-}
-
-.menu {
-  /* width: 100%; */
 }
 
 .nav {
@@ -236,9 +226,7 @@ header {
 .menu__close {
   width: 32px;
   height: 32px;
-  /* background: url(../img/close_search.png) no-repeat center; */
   outline: none;
-  /* margin-left: auto; */
   position: relative;
 }
 
@@ -2088,6 +2076,11 @@ svg path {
   padding-left: 52px;
 }
 
+.personal__link:hover a .count__message,
+.personal__link.current__item .count__message {
+    color: #00baff;
+}
+
 .personal__link.current__item.personal__link_profile a path.user__path,
 .personal__link.personal__link_profile a:hover path.user__path {
   fill: #00baff;
@@ -2321,7 +2314,6 @@ table a {
 .message__btn {
   padding-bottom: 13px;
   display: block;
-  cursor: pointer;
   font-weight: 500;
   font-size: 16px;
   color: rgba(10, 21, 61, 0.3);
@@ -2392,7 +2384,10 @@ table a.ticket__link {
 .message__list.message__list_read .message__icon {
   background: url(../img/message_read.svg) no-repeat center;
 }
-
+.message__list_read .message__icon {
+  background: url(../img/message_read.svg) no-repeat center;
+  opacity: 0.6;
+}
 .message__link {
   font-size: 15px;
   line-height: 14px;

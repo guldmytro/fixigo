@@ -1,0 +1,39 @@
+{% extends 'layout/account.html' %}
+
+{% block title %}Уведомления{% if notifications_count %}({{ notifications_count }}){% endif %}{% endblock %}
+
+{% block account_content %}
+    <h2 class="profile__subtitle fz_22 fw_demi mb_35">
+        Уведомления
+        {% if notifications_count %}
+            <span class="count_message">({{ notifications_count }})</span>
+        {% endif %}
+    </h2>
+    <div class="message__switch">
+        {% if unread == 'unread' %}
+            <a href="{% url 'notifications' %}" class="message__btn">Все</a>
+            <span class="message__btn active">Непрочитанные</span>
+        {% else %}
+            <span class="message__btn active">Все</span>
+            {% if notifications_count %}
+                <a href="{% url 'notifications_unread' 'unread' %}" class="message__btn">Непрочитанные</a>
+            {% endif %}
+        {% endif %}
+    </div>
+    {% if notifications %}
+        <ul class="message__list">
+            {% for notification in notifications %}
+                {% include 'partials/archive_notification.html' %}
+            {% endfor %}
+        </ul>
+        {% include 'partials/pagination.html' with page=notifications %}
+    {% else %}
+        <p class="none__info">
+            {% if unread == 'unread' %}
+                У Вас нет новых уведомлений
+            {% else %}
+                У Вас нет уведомлений
+            {% endif %}
+        </p>
+    {% endif %}
+{% endblock %}

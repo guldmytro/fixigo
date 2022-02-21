@@ -32,15 +32,17 @@
                 Мои подписки
             </a>
         </li>
-        <li class="personal__link">
-            <a href="/message.php">
+        <li class="personal__link{% if section == 'notifications' %} current__item{% endif %}">
+            <a href="{% url 'notifications' %}">
                 Уведомления
-                <span class="count__message ms-1">(0)</span>
+                {% if notifications_count %}
+                    <span class="count__message ms-1">({{ notifications_count }})</span>
+                {% endif %}
             </a>
 
         </li>
-        <li class="personal__link">
-            <a href="/ticket.php">
+        <li class="personal__link{% if section == 'tickets' %} current__item{% endif %}">
+            <a href="{% url 'tickets_list' %}">
                 Мои заявки
             </a>
         </li>

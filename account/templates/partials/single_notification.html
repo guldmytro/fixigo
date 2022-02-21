@@ -1,0 +1,14 @@
+<div class="message__title">
+    <div class="message__icon"></div>
+    <p class="message__link">
+        {{ notification.title }}
+    </p>
+    <p class="message__date">
+        {{ notification.publish|date:'d.m.Y' }}
+    </p>
+</div>
+<div class="message__content">
+    <div>
+        {{ notification.body|linebreaks }}
+    </div>
+</div>

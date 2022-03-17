@@ -70,20 +70,23 @@ class PasswordChangeForm(forms.Form):
     old_password = forms.CharField(label='Старый пароль',
                                    required=False,
                                    widget=forms.PasswordInput(attrs={
-                                       'placeholder': False
+                                       'placeholder': False,
+                                       'autocomplete': 'off',
                                    }))
     password = forms.CharField(label='Пароль',
                                min_length=8,
                                required=False,
                                help_text='Пароль должен содержать как минимум 8 символов',
                                widget=forms.PasswordInput(attrs={
-                                   'placeholder': False
+                                   'placeholder': False,
+                                   'autocomplete': 'off'
                                }))
     password2 = forms.CharField(label='Повторите пароль',
                                 min_length=8,
                                 required=False,
                                 widget=forms.PasswordInput(attrs={
-                                    'placeholder': False
+                                    'placeholder': False,
+                                    'autocomplete': 'off'
                                 }))
 
     def __init__(self, *args, **kwargs):

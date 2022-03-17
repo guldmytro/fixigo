@@ -74,6 +74,11 @@ def profile(request):
             if cd['password']:
                 user.set_password(cd['password'])
                 user.save()
+                re_user = authenticate(request,
+                                       username=user.email,
+                                       password=cd['password'])
+                login(request, re_user)
+
             if password_change_form.has_changed() or profile_form.has_changed():
                 messages.info(request, 'Ваши данные успешно обновлены')
         else:
@@ -240,3 +245,8 @@ def tickets_add(request):
         'breadcrumbs': breadcrumbs
     }
     return render(request, 'account/ticket_add.html', context)
+
+
+def subscribe_add(request):
+    context = {}
+    return render(request, 'account/subscribe_add.html', context)

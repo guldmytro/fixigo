@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 const imageBg = new IntersectionObserver((entries, imgObserver) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -290,12 +292,14 @@ checkWrap.forEach((elem) => {
   };
 });
 
-ScrollOut({
+const scrollOut = ScrollOut({
   targets: '.xyz_start',
-  onShown: (el) => {
+  onShown: (el, ctx, scrollingElement) => {
+  console.log(scrollingElement);
     el.classList.add('xyz-in');
   },
 });
+console.log(ScrollOut);
 const filterBtn = document.querySelector('.filter_btn');
 const filterClose = document.querySelector('.close_filter');
 const filterWrap = document.querySelector('.catalog_filter');
@@ -313,10 +317,6 @@ const openForm = document.querySelectorAll('.open__form');
 
 const consultReview = document.querySelector('.consult_review');
 const reviewBtn = document.querySelectorAll('.review__btn');
-
-// const openFormCatalog = document.querySelector("#main");
-// const entryFormTitle = document.querySelector(".entry_title");
-// const titleVal = entryFormTitle.innerHTML
 
 if (popupForm) {
   popupForm.onclick = (e) => {
@@ -474,3 +474,5 @@ function resultVal() {
 
 $('.order__input_card').mask('XXXX-XXXX-XXXX-XXXX');
 $('.order__input_date').mask('XX/XX');
+
+});

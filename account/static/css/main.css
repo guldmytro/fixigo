@@ -15,28 +15,6 @@ body {
   min-height: 100vh;
 }
 
-body,
-html {
-    height: 100%
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%
-}
-
-.content {
-    display: flex;
-    flex-flow: column nowrap;
-    flex: 1 0 auto;
-    row-gap: 5rem
-}
-
-.footer {
-    flex: 0 0 auto
-}
-
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -431,6 +409,12 @@ header {
 }
 .px-2 {
     padding: 0 30px;
+}
+.rate-content {
+    padding: 0 20px;
+}
+.rate-content > * + * {
+    margin-top: 0.4em;
 }
 @media screen and (min-width: 1200px) {
   .menu-item-has-children:hover .sub-menu {

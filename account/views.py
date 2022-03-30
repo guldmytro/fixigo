@@ -8,6 +8,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.urls import reverse
+from .models import Subscription
+from rate.models import Rate
 
 
 def user_login(request):
@@ -247,6 +249,51 @@ def tickets_add(request):
     return render(request, 'account/ticket_add.html', context)
 
 
+@login_required
+def subscribe_list(request):
+    breadcrumbs = [
+        {
+            'link': False,
+            'label': 'Мои подписки'
+        }
+    ]
+    profile = Profile.objects.get(user=request.user)
+    subscriptions_obj = Subscription.objects.filter(paid=True, profile=profile)
+    paginator = Paginator(subscriptions_obj, 10)
+    page = request.GET.get('page')
+    try:
+        subscriptions = paginator.page(page)
+    except PageNotAnInteger:
+        subscriptions = paginator.page(1)
+    except EmptyPage:
+        subscriptions = paginator.page(paginator.num_pages)
+
+    context = {
+        'subscriptions': subscriptions,
+        'section': 'subscribe',
+        'breadcrumbs': breadcrumbs
+    }
+    return render(request, 'account/subscribe.html', context)
+
+
+@login_required
 def subscribe_add(request):
-    context = {}
+    subscribe_form = forms.SubscribeForm()
+    rates = Rate.objects.filter(status='active')
+    breadcrumbs = [
+        {
+            'link': reverse('subscribe_list'),
+            'label': 'Мои подписки'
+        },
+        {
+            'link': False,
+            'label': 'Оформить / изменить подписку'
+        }
+    ]
+    context = {
+        'subscribe_form': subscribe_form,
+        'rates': rates,
+        'breadcrumbs': breadcrumbs,
+        'section': 'subscribe',
+    }
     return render(request, 'account/subscribe_add.html', context)

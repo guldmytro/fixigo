@@ -1,0 +1,1086 @@
+{% extends 'layout/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<section class="head__section d-flex align-items-center justify-content-center bg__style pt_120 pb_120 lzy_bg"
+    data-image="{% static 'img/head_bg.jpg' %}">
+    <div class="container offer text_center" xyz="fade down duration-5 stagger">
+      <p class="offer__subtitle fz_24 fw_medium xyz_start mb_20">
+        Подписка на ремонт
+      </p>
+      <p class="offer__subtext c_white xyz_start fz_18 fs_i mb_20">
+        Впервые в Москве: ремонт и сервисное обслуживание по подписке
+      </p>
+      <h1 class="offer__title c_white xyz_start mb_35 fz_36 fw_bolder">
+        Сантехника. Электрика. Оргтехника
+        Сервис, который вам нужен
+      </h1>
+      <p class="offer__text c_white xyz_start">
+        Ремонт, который каждому по карману.
+        Минимум вложений и всегда исправная
+        сантехника, электрика, оргтехника в доме и офисе. Устраняем любые виды
+        неиспарвностей быстро, с гарантией <span> от 1199 руб/мес</span>
+      </p>
+      <div class="offer__order d-flex align-items-center xyz_start">
+        <p>
+          Подпишись и получай квалифицированные
+          услуги ремонта на регулярной основе
+        </p>
+        <button class="btn offer__btn">
+        <span class="effect__bg"></span>
+          <span>
+            Оформить подписку
+          </span>
+          <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="work__place">
+      <div class="contact__icon d-flex align-items-center justify-content-center me-2">
+        <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M8.0001 0.22583C3.80386 0.22583 0.401855 3.62783 0.401855 7.82408C0.401855 8.52721 0.49748 9.20895 0.676355 9.85583C0.748355 10.1146 0.83273 10.3688 0.930605 10.6152L1.16123 11.1383L8.0001 23.7743L14.848 11.1192L15.0561 10.6478C15.1596 10.3902 15.2485 10.1258 15.3239 9.8547C15.5027 9.20783 15.5984 8.5272 15.5984 7.82295C15.5984 3.62783 12.1964 0.22583 8.0001 0.22583ZM8.0001 11.1158C6.14386 11.1158 4.63861 9.61058 4.63861 7.75433C4.63861 5.89808 6.14386 4.39283 8.0001 4.39283C9.85635 4.39283 11.3616 5.89808 11.3616 7.75433C11.3616 9.6117 9.85635 11.1158 8.0001 11.1158Z"
+            fill="#00729E" />
+        </svg>
+      </div>
+      <p>
+        Работаем по Москве и области с частными и юридическими лицами
+      </p>
+    </div>
+</section>
+<section class="pt_100 first" xyz="fade down duration-5 stagger">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-10 col-xl-6 mb-4 mb-xl-0">
+          <h2 class="section__title first__title xyz_start mb_40">
+            FIXIGO - первая в Росии компания по
+            ремонту и сервисному обслуживанию
+            по подписке
+          </h2>
+          <p class="first__subtitle fz_24 fw_medium xyz_start">
+            <b>Ремонт по подписке -</b> это Ваша страховка от непредвиденных затрат, потерь времени
+            и переплат
+          </p>
+        </div>
+        <div class="col-xl-6 col-lg-8 mx-auto pos_rel ">
+          <p class="first__item first__item__1 first__item_left xyz_start">
+            Ремонт вытяжки <br>
+            <span>2 000 руб</span> &rarr; 0 руб
+          </p>
+          <p class="first__item first__item__2 first__item_left xyz_start">
+            Ремонт крана и мойки <br>
+            <span>10 000 руб</span> &rarr; 0 руб
+          </p>
+          <p class="first__item first__item__3 first__item_left xyz_start">
+            Ремонт духового шкафа <br>
+            <span>3 000 руб</span> &rarr; 0 руб
+          </p>
+          <p class="first__item first__item__4 first__item_right xyz_start">
+            Ремонт электрической плиты <br>
+            <span>10 000 руб</span> &rarr; 0 руб
+          </p>
+          <img src="{% static 'img/first_bg.png' %}" class="first__img " alt="">
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="pt_100 facilitate" xyz="fade down duration-5 stagger">
+    <div class="container">
+      <h2 class="section__title facilitate__title mb_40 text_center xyz_start">
+        Облегчаем организацию ремонта и делаем его дешевле
+      </h2>
+      <p class="facilitate__subtitle xyz_start">
+        Лучшие специалисты своего дела выполняют ремонт и сервисное обслуживание сантехники, электрики, оргтехники
+        в жилых домах, офисах, административных, общественных, производственных помещениях
+
+      </p>
+      <div class="row align-items-center">
+        <div class="col-xl-6 col-lg-10 mb-4 mb-xl-0 pos_rel d-flex justify-content-xl-end">
+          <img src="{% static 'img/facilitate_img.png' %}" class="facilitate__img xyz_start facilitate__img_1" alt="">
+          <div class="repair xyz_start repair_1">
+            <h3 class="repair__repair xyz_start">
+              Ремонт по подписке:
+            </h3>
+            <ul class="repair__list xyz_start">
+              <li>
+                <span>
+                  1
+                </span>
+                <p>
+                  Экономит Ваше время, нервы и деньги
+                </p>
+
+              </li>
+              <li>
+                <span>
+                  2
+                </span>
+                <p>
+                  Позволяет грамотно спланировать ремонт
+                </p>
+
+              </li>
+              <li>
+                <span>
+                  3
+                </span>
+                <p>
+                  Снижает риски непредвиденных поломок и переплат
+                </p>
+
+              </li>
+              <li>
+                <span>
+                  4
+                </span>
+                <p>
+                  Снижает нагрузку на бюджет во время ремонтов
+                </p>
+
+              </li>
+            </ul>
+          </div>
+
+
+        </div>
+        <div class="col-xl-6 facilitate__content xyz_start">
+          <p>
+            <b>
+              Клиент платит один раз в месяц или один раз в год. Не тратит время на поиск исполнителей для ремонта.
+              Получает профессиональное обслуживание по договору, по доступной цене, без переплат.
+
+            </b>
+          </p>
+          <p>
+            Поломка компьютера, телевизора, электроплиты, стиральной машины, холодильника всегда случается в самый
+            неподходящий момент. Технику необходимо вести в сервисный центр. Это непредвиденные затраты денег и времени.
+          </p>
+          <p>
+            Выход из строя сантехники, прорыв труб, замыкание электропроводки, поломка электрощитов всегда происходит
+            внезапно. Где искать мастера? И во сколько обойдется ремонт? Не всегда на ремонт есть средства в данный
+            момент.
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="benefit pt_100 pb_90" xyz="fade down duration-5 stagger">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 xyz_start">
+          <h2 class="section__title benefit__title mb_40">
+            Ремонт по подписке выгодно частным лицам и бизнесу
+          </h2>
+          <p class="benefit__subtitle fz_24 fw_demi">
+            Оформляйте подписку на следующие виды ремонта и обслуживания:
+          </p>
+        </div>
+        <div class="col-lg-6 offset-lg-6 xyz_start">
+          <div class="benefit__wrap benefit__wrap_first">
+            <div class="benefit__bg bg__style lzy_bg" data-image="{% static 'img/benefit_img_1.jpg' %}">
+
+            </div>
+            <div class="benefit__content">
+              <h3 class="benefit__name fz_18 fw_bold mb_20 ">
+                Ремонт электротехники:
+              </h3>
+              <ul class="benefit__list">
+                <li>
+                  Телевизоров
+                </li>
+                <li>
+                  Стиральных машин
+                </li>
+                <li>
+                  Холодильников
+                </li>
+                <li>
+                  Электроплит
+                </li>
+                <li>
+                  Духовых шкафов
+                </li>
+                <li>
+                  Другой бытовой техники
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 xyz_start">
+          <div class="benefit__wrap">
+
+            <div class="benefit__bg bg__style lzy_bg" data-image="{% static 'img/benefit_img_2.jpg' %}">
+
+            </div>
+            <div class="benefit__content">
+              <h3 class="benefit__name fz_18 fw_bold mb_20">
+                Ремонт и замена электрики:
+              </h3>
+              <ul class="benefit__list">
+                <li>
+                  Ремонт и/или замена электропроводки
+                </li>
+                <li>
+                  Монтаж/демонтаж розеток и выключателей
+                </li>
+                <li>
+                  Любые виды неисправностей
+                </li>
+                <li>
+                  Обрыв провода, короткое замыкание
+                </li>
+                <li>
+                  Ремонт электрощитов и тд
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-6 xyz_start">
+          <div class="benefit__wrap">
+
+            <div class="benefit__bg bg__style lzy_bg" data-image="{% static 'img/benefit_img_3.jpg' %}">
+
+            </div>
+
+            <div class="benefit__content">
+              <h3 class="benefit__name fz_18 fw_bold mb_20">
+                Ремонт сантехники:
+              </h3>
+              <ul class="benefit__list">
+                <li>
+                  Ремонт и замена труб, кранов, фильтров
+                </li>
+                <li>
+                  Ремонт душевых кабин, гидробокосов
+                </li>
+                <li>
+                  Подключение стиральных, посудомоечных
+                  машин и другого сантехнического оборудования
+                </li>
+                <li>
+                  Монтаж сантехнических устройств
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 xyz_start">
+          <div class="benefit__wrap">
+
+            <div class="benefit__bg bg__style lzy_bg" data-image="{% static 'img/benefit_img_4.jpg' %}">
+
+            </div>
+            <div class="benefit__content">
+              <h3 class="benefit__name fz_18 fw_bold mb_20">
+                Ремонт оргтехники:
+              </h3>
+              <ul class="benefit__list">
+                <li>
+                  Компьютеров, ноутбуков, планшетов
+                </li>
+                <li>
+                  Принтеров, сканеров, ксероксов, МФУ
+                </li>
+                <li>
+                  Шредеров и другой офисной оргтехники
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex flex-column justify-content-end xyz_start">
+          <p class="fz_20 fw_demi benefit__end">
+            Долгосрочные контракты с организациями, представителями крупного и малого бизнеса обсуждаются в
+            индивидуальном формате. Наши клиенты всегда получают бонусы
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="what pt_100 pb_100" xyz="fade down duration-5 stagger">
+    <div class="container">
+      <h2 class="section__title what__title mb_40 text_center xyz_start">
+        Что такое подписка на ремонт?
+      </h2>
+      <div class="row">
+        <div class="col-lg-4 col-sm-8 col-md-10 mx-auto mx-lg-0 xyz_start what__item mb_35">
+
+          <div class="what__icon">
+            <img src="{% static 'img/what_1.svg' %}" alt="">
+          </div>
+
+          <p class="what__text fz_20 fw_medium text_center">
+            Все виды ремонта сантехники,
+            электрики, электропроводки
+            (срочные и плановые)
+          </p>
+
+
+        </div>
+        <div class="col-lg-4 col-sm-8 col-md-10 mx-auto mx-lg-0 xyz_start what__item mb_35">
+
+          <div class="what__icon">
+            <img src="{% static 'img/what_2.svg' %}" alt="">
+          </div>
+
+          <p class="what__text fz_20 fw_medium text_center">
+            Техническая поддержка, в том числе 24/7 (в зависимости от пакета услуг)
+          </p>
+
+
+        </div>
+        <div class="col-lg-4 col-sm-8 col-md-10 mx-auto mx-lg-0 xyz_start what__item mb_35">
+
+          <div class="what__icon">
+            <img src="{% static 'img/what_3.svg' %}" alt="">
+          </div>
+
+          <p class="what__text fz_20 fw_medium text_center">
+            Профессиональное обслуживание лучших специалистов во всех предлагаемых направлениях
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="calltoaction calltoaction_two pt_50 pb_50 bg__style lzy_bg" data-image="{% static 'img/calltoaction_bg.jpg' %}"
+    xyz="fade down duration-5 stagger">
+    <div class="container">
+      <div class="calltoaction_wrap text_center xyz_start">
+        <h2 class="calltoaction__title fz_24 fw_bold ">
+          Подпишись и получай удобный сервис без переплат
+        </h2>
+        <p class="calltoaction__text fz_20 fw_medium ">
+          Воспользуйтесь акционным предложением: годовая подписка дешевле!
+        </p>
+        <button class="btn calltoaction__btn mx-auto pos_rel">
+          <span class="effect__bg"></span>
+          <span>
+            Оформить подписку
+          </span>
+          <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </button>
+      </div>
+    </div>
+    </section>
+    <section class="fix pb_90 pos_rel" xyz="fade down duration-5 stagger">
+
+    <img src="{% static 'img/fix_img.png' %}" class="fix__img" alt="">
+
+    <div class="container">
+      <div class="col-lg-6 fix__content xyz_start">
+        <h2 class="section__title fix__title mb_40">
+          FIXIGO - все исправим и починим
+        </h2>
+        <p>
+          Компания <b>Fixigo</b> занимается сервисным обслуживанием и ремонтом бытовой
+          и офисной электротехники, оргтехники, электрики и сантехники по подписке.
+          С нами выгодно работать предприятиям и частным лицам. Быстро и
+          качественно починим крупногабаритную технику, а также мелкие бытовые
+          приборы. По договору подписки специалист выезжает на объект вне
+          зависимости от того, сломался у вас чайник, прорвало трубу или требуется
+          замена электропроводки. Организовать ремонт самостоятельно часто бывает
+          накладно, утомительно и нерентабельно, а <b> ремонт по подписке</b> позволяет
+          <b>сэкономить</b> время, нервы и деньги
+        </p>
+      </div>
+
+
+    </div>
+    </section>
+    <section class="advant pt_100 pb_100" xyz="fade down duration-5 stagger">
+    <div class="container">
+      <h2 class="section__title advant__title mb_40 text_center xyz_start">
+        Преимущества работы с нами
+      </h2>
+      <div class="advant__wrap pos_rel d-flex justify-content-between">
+        <img src="{% static 'img/advant_doted.png' %}" class="advant__doted" alt="">
+        <img src="{% static 'img/advant_doted.png' %}" class="advant__doted advant__doted_bottom" alt="">
+        <p class="advant__fixigo xyz_start">
+          FIXIGO
+        </p>
+        <div class="advant__side xyz_start">
+          <h3 class="advant__subtitle text_center fz_20 fw_demi pos_rel ">
+            Для частных лиц
+          </h3>
+          <ul class="advant__list">
+            <li>
+              <h3 class="advant__name">
+                Доступная цена
+              </h3>
+              <p class="advant__text">
+                Одна подписка на один адрес. Стоимость подписки в месяц/год
+                серьезно не отражается на бюджете семьи
+              </p>
+            </li>
+            <li>
+              <h3 class="advant__name">
+                Гарантия качества
+              </h3>
+              <p class="advant__text">
+                Вся ваша техника всегда в исправном состоянии. Мастер приезжает без задержек, в согласованное с клиентом
+                время
+              </p>
+            </li>
+            <li>
+              <h3 class="advant__name">
+                Удобная оплата
+              </h3>
+              <p class="advant__text">
+                Абонплата 1 раз в месяц или 1 раз в год. Выбирайте, что
+                выгоднее для вас
+              </p>
+            </li>
+            <li>
+              <h3 class="advant__name">
+                Выбор тарифов
+              </h3>
+              <p class="advant__text">
+                Широкий выбор пакетов услуг: стандарт, расширенный,
+                премиум и т.д
+              </p>
+            </li>
+            <li>
+              <h3 class="advant__name">
+                Экономия времени
+              </h3>
+              <p class="advant__text">
+                Не надо тратить время на поиск специалистов, покупку расходных материалов и транспортировку неисправной
+                техники в сервис и обратно.
+              </p>
+            </li>
+            <li>
+              <h3 class="advant__name">
+                Сохранение нервов
+              </h3>
+              <p class="advant__text">
+                Не надо беспокоиться, что у вас поломан утюг или не работает выключатель. Полную ответственность по
+                договору несут специалисты
+              </p>
+            </li>
+            <li>
+              <h3 class="advant__name">
+                Экономия финансов
+              </h3>
+              <p class="advant__text">
+                Ремонт без переплат и непредвиденных расходов. Специалист приезжает и полностью выполняет задачи любой
+                сложности, согласно выбранному пакету услуг. Никаких дополнительных плат
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="advant__side xyz_start">
+          <h3 class="advant__subtitle text_center fz_20 fw_demi pos_rel">
+            Для бизнеса
+          </h3>
+          <ul class="advant__list">
+            <li>
+              <h3 class="advant__name">
+                Разумная цена
+              </h3>
+              <p class="advant__text">
+                Для долгосрочных контрактов особые условия и скидки
+              </p>
+            </li>
+            <li>
+              <h3 class="advant__name">
+                Гарантия качества
+              </h3>
+              <p class="advant__text">
+                Работают профессионалы — квалифицированные специалисты в своем направлении
+              </p>
+            </li>
+            <li>
+              <h3 class="advant__name">
+                Выбор тарифов
+              </h3>
+              <p class="advant__text">
+                Широкий выбор пакетов услуг: стандарт, расширенный,
+                премиум и т.д
+              </p>
+            </li>
+            <li>
+              <h3 class="advant__name">
+                Экономия человеческих ресурсов
+              </h3>
+              <p class="advant__text">
+                Не надо тратить время на организацию ремонта, поиск мастера, специалистов, расходных материалов
+              </p>
+            </li>
+            <li>
+              <h3 class="advant__name">
+                Индивидуальный подход
+              </h3>
+              <p class="advant__text">
+                Условия сотрудничества с корпоративными клиентами обсуждаем индивидуально
+              </p>
+            </li>
+            <li>
+              <h3 class="advant__name">
+                Экономия бюджета
+              </h3>
+              <p class="advant__text">
+                Предприятия экономят на затратах, связанных с ремонтом, а именно: на содержании в штате специального
+                персонала (техников, сантехников, системных администраторов, электриков), на покупке расходных
+                материалов и оборудования, на логистических услугах
+              </p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    </section>
+    <section class="calltoaction pt_50 pb_50 bg__style lzy_bg" data-image="{% static 'img/calltoaction_bg2.jpg' %}"
+    xyz="fade down duration-5 stagger">
+    <div class="container">
+      <div class="calltoaction_wrap calltoaction_wrap_second text_center xyz_start">
+        <h2 class="calltoaction__title fz_24 fw_bold">
+          Ремонт без переплат и непредвиденных расходов
+
+
+        </h2>
+        <p class="calltoaction__text fz_20 fw_medium">
+          Коплекс услуг по подписке обойдется дешевле,
+          чем индивидуальный ремонт каждой новой поломки
+        </p>
+        <button class=" btn calltoaction__btn mx-auto pos_rel">
+        <span class="effect__bg"></span>
+          <span>
+            Оформить подписку
+          </span>
+          <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </button>
+      </div>
+    </div>
+    </section>
+    <section class="econom pt_100 pb_120" xyz="fade down duration-5 stagger">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 xyz_start">
+          <h2 class="section__title benefit__title benefit__title_2 text_center">
+            Сколько можно сэкономить?
+          </h2>
+
+        </div>
+        <div class="col-lg-6 xyz_start">
+          <div class="benefit__wrap ">
+            <div class="benefit__bg bg__style lzy_bg" data-image="{% static 'img/econom_1.jpg' %}">
+
+            </div>
+            <div class="benefit__content">
+              <h3 class="econom__name fz_20 text_center fw_bold mb_20">
+                До 50% экономия средств
+              </h3>
+              <p class="econom__text">
+                Просто посчитайте, сколько примерно стоит
+                ремонт электрики, сантехники в индивидуальном
+                порядке. А если в месяц случилось сразу несколько
+                поломок одновременно или? А если компьютеры и оргтехника требуют регулярного профилактического ремонта и
+                обслуживания? Бизнес экономит на содержании штата, рабочих мест, на зарплате работникам и налогах.
+                Частные лица экономят на поэтапной оплате
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 xyz_start">
+          <div class="benefit__wrap">
+
+            <div class="benefit__bg bg__style lzy_bg" data-image="{% static 'img/econom_2.jpg' %}">
+
+            </div>
+            <div class="benefit__content">
+              <h3 class="econom__name fz_20 text_center fw_bold mb_20">
+                100% экономия времени
+              </h3>
+              <p class="econom__text">
+                Только представьте, сколько времени вы потратите на поиск специалистов и транспортировку техники в
+                сервисный центр. Наши специалисты выезжают на объект, даже если у вас сломался электрочайник или утюг. А
+                вам с мелкой бытовой техникой придется потратить время, чтобы привезти/увезти ее из ремонтной
+                мастерской. С крупной техникой еще сложнее.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </section>
+    <section class="quality pt_100" xyz="fade down duration-5 stagger">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0 xyz_start">
+          <h2 class="section__title quality__title mb_40 ">
+            100% гарантия качества
+          </h2>
+          <p class="quality__text">
+            В вашем доме, офисе и/или в служебном помещении вся сантехника, электрика, оргтехника будут всегда в
+            исправном состоянии. Наши специалисты несут полную ответственность за качество выполненных работ.
+          </p>
+        </div>
+        <div class="col-lg-7 pos_rel xyz_start">
+          <img src="{% static 'img/quality_img.png' %}" class="quality__img" alt="">
+          <ul class="quality__list">
+            <li>
+              <span class="quality__icon">
+
+              </span>
+              <p class="fz_16 fw_demi">
+                В штате профессионалы с опытом работы
+              </p>
+
+            </li>
+            <li>
+              <span class="quality__icon">
+
+              </span>
+              <p class="fz_16 fw_demi">
+                Квалифицированные профильные специалисты
+              </p>
+
+            </li>
+            <li>
+              <span class="quality__icon">
+
+              </span>
+              <p class="fz_16 fw_demi">
+                Работа по договору, согласно тарифному плану
+              </p>
+
+            </li>
+            <li>
+              <span class="quality__icon">
+
+              </span>
+              <p class="fz_16 fw_demi">
+                Круглосуточная поддержка через форму обратной связи,
+                WhatsApp, Telegram, колл-центр
+              </p>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="arguments pt_100" xyz="fade down duration-5 stagger">
+    <div class="container">
+      <h2 class="section__title what__title mb_40 text_center xyz_start">
+        Аргументы клиентов в пользу ремонта по подписке
+      </h2>
+
+      <div class="row">
+        <div class="col-lg-4 col-sm-10 col-md-8 mx-auto mx-lg-0 mb_35 arguments__item xyz_start">
+
+          <div class="what__icon">
+            <img src="{% static 'img/arguments_1.svg' %}" alt="">
+          </div>
+          <h3 class="arguments__title">
+            Доступная цена
+          </h3>
+          <p class="what__text   text_center">
+            Стоимость подписки соизмерима с одним самым
+            несложным ремонтом. Платить небольшую сумму
+            в месяц или один раз в год намного выгоднее, чем
+            оплачивать каждый ремонт в отдельности
+          </p>
+
+
+        </div>
+        <div class="col-lg-4 col-sm-10 col-md-8 mx-auto mx-lg-0 mb_35 arguments__item xyz_start">
+          <div class="what__icon">
+            <img src="{% static 'img/arguments_2.svg' %}" alt="">
+          </div>
+          <h3 class="arguments__title">
+            Быстро
+          </h3>
+          <p class="what__text   text_center">
+            Если нужно починить кран, устранить протечку, срочно восстановить работу компьютера, мастера приезжают
+            максимально быстро. Не нужно долго ждать и искать специалиста
+          </p>
+
+
+        </div>
+        <div class="col-lg-4 col-sm-10 col-md-8 mx-auto mx-lg-0 mb_35 arguments__item xyz_start">
+
+          <div class="what__icon">
+            <img src="{% static 'img/arguments_3.svg' %}" alt="">
+          </div>
+          <h3 class="arguments__title">
+            Удобно
+          </h3>
+          <p class="what__text   text_center">
+            В течение всего года не нужно беспокоиться об исправности всей техники в доме или в офисе. Техническая
+            поддержка 24/7 и обслуживание позволяет пользоваться услугами
+            мастеров без ограничений
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="review pt_100" xyz="fade down duration-5 stagger">
+
+    <h2 class="section__title what__title mb_40 text_center xyz_start">
+      Отзывы, которые нас вдохновляют
+    </h2>
+    <div class="review__slider swiper-container xyz_start">
+      <div class="swiper__arrow swiper__arrow_left">
+        <svg width="49" height="41" viewBox="0 0 49 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M37.9268 20.5006L48.6395 2.29049C48.8789 1.8829 48.8326 1.36747 48.5231 1.00948C48.2147 0.649336 47.7101 0.528567 47.2733 0.705406L0.898348 19.4762C0.481059 19.6466 0.208252 20.0499 0.208252 20.5006C0.208252 20.9513 0.481059 21.3546 0.898348 21.525L47.2733 40.2958C47.4071 40.3497 47.5483 40.3756 47.6874 40.3756C48.0012 40.3756 48.3096 40.2419 48.5231 39.9917C48.8326 39.6338 48.8789 39.1183 48.6395 38.7107L37.9268 20.5006ZM34.8644 25.079L35.6106 27.6087L22.8437 22.1569L34.8644 25.079ZM35.5416 19.3964L19.6002 19.9485L35.5416 14.3846V19.3964Z"
+            fill="url(#paint0_linear_60_461)" />
+          <defs>
+            <linearGradient id="paint0_linear_60_461" x1="47.262" y1="40.375" x2="-2.07746" y2="37.3003"
+              gradientUnits="userSpaceOnUse">
+              <stop class="stop_1" stop-color="#303C42" />
+              <stop class="stop_2" offset="1" stop-color="#303C42" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+      </div>
+      <div class="swiper__arrow swiper__arrow_right">
+        <svg width="49" height="41" viewBox="0 0 49 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.073 20.4994L0.360206 38.7095C0.120827 39.1171 0.16719 39.6325 0.476662 39.9905C0.785049 40.3507 1.28969 40.4714 1.72641 40.2946L48.1014 21.5238C48.5187 21.3534 48.7915 20.9501 48.7915 20.4994C48.7915 20.0487 48.5187 19.6454 48.1014 19.475L1.72641 0.704182C1.59269 0.650269 1.45143 0.62439 1.31233 0.62439C0.998547 0.62439 0.690159 0.758099 0.476658 1.00826C0.167187 1.36625 0.120823 1.88167 0.360203 2.28927L11.073 20.4994ZM14.1353 15.921L13.3892 13.3913L26.1561 18.8431L14.1353 15.921ZM13.4582 21.6036L29.3996 21.0515L13.4582 26.6154L13.4582 21.6036Z"
+            fill="url(#paint0_linear_60_460)" />
+          <defs>
+            <linearGradient id="paint0_linear_60_460" x1="47.262" y1="40.375" x2="-2.07746" y2="37.3003"
+              gradientUnits="userSpaceOnUse">
+              <stop class="stop_1" stop-color="#303C42" />
+              <stop class="stop_2" offset="1" stop-color="#303C42" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+      </div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide d-flex flex-wrap justify-content-between review__slide">
+          <p class="review__name fz_20 fw_demi">
+            Сергей
+          </p>
+          <p class="review__date fw_light">
+            20.09.2021
+          </p>
+          <p class="review__text">
+            Идейные соображения высшего порядка, а также консультация с широким активом обеспечивает широкому кругу
+            (специалистов) участие в формировании направлений прогрессивного развития. Товарищи! постоянное
+            информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание
+            форм развития. Идейные соображени
+          </p>
+        </div>
+        <div class="swiper-slide d-flex flex-wrap justify-content-between review__slide">
+          <p class="review__name fz_20 fw_demi">
+            Сергей
+          </p>
+          <p class="review__date fw_light">
+            20.09.2021
+          </p>
+          <p class="review__text">
+            Идейные соображения высшего порядка, а также консультация с широким активом обеспечивает широкому кругу
+            (специалистов) участие в формировании направлений прогрессивного развития. Товарищи! постоянное
+            информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание
+            форм развития. Идейные соображени
+          </p>
+        </div>
+        <div class="swiper-slide d-flex flex-wrap justify-content-between review__slide">
+          <p class="review__name fz_20 fw_demi">
+            Сергей
+          </p>
+          <p class="review__date fw_light">
+            20.09.2021
+          </p>
+          <p class="review__text">
+            Идейные соображения высшего порядка, а также консультация с широким активом обеспечивает широкому кругу
+            (специалистов) участие в формировании направлений прогрессивного развития. Товарищи! постоянное
+            информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание
+            форм развития. Идейные соображени
+          </p>
+        </div>
+        <div class="swiper-slide d-flex flex-wrap justify-content-between review__slide">
+          <p class="review__name fz_20 fw_demi">
+            Сергей
+          </p>
+          <p class="review__date fw_light">
+            20.09.2021
+          </p>
+          <p class="review__text">
+            Идейные соображения высшего порядка, а также консультация с широким активом обеспечивает широкому кругу
+            (специалистов) участие в формировании направлений прогрессивного развития. Товарищи! постоянное
+            информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание
+            форм развития. Идейные соображени
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class=" btn review__btn mx-auto">
+    <span class="effect__bg"></span>
+      <span>
+        Оставить отзыв
+      </span>
+      <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+
+    </button>
+    </section>
+    <section class="type pt_100" xyz="fade down duration-5 stagger">
+    <div class="container">
+      <h2 class="text_center type__title section__title mb_40 xyz_start">
+        Три вида подписки на любой бюджет и запросы
+      </h2>
+      <div class="type__row d-flex justify-content-between flex-wrap">
+        <div class="type__item d-flex pos_rel xyz_start">
+          <div class="type_bg">
+            <img src="{% static 'img/type_bg.jpg' %}" class="" alt="">
+          </div>
+
+          <div class="type__wrap d-flex flex-column">
+            <h3 class="type__name pb_20 mb_25 pos_rel fz_20 fw_demi text_center">
+              Стандарт
+            </h3>
+            <ul class="type__text">
+              <li>
+                Ремонт: электротехника, электрика
+              </li>
+              <li>
+                + Техническая поддержка
+              </li>
+            </ul>
+
+            <p class="type__price fz_18 fw_demi text_center">
+              1199 руб/мес
+            </p>
+            <a href="subscribe_order.php" class="btn type__btn mx-auto  mt-auto mb_30">
+            <span class="effect__bg"></span>
+              <span>
+                Оплатить
+              </span>
+              <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+                <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+              </svg>
+            </a>
+            <p class="type__max fz_18 fw_demi text_center">
+              Цена, руб/год: &nbsp; <span class="price__max fw_demi">14388</span> &nbsp; <span
+                class="price__min fw_demi">10000</span>
+            </p>
+          </div>
+
+        </div>
+        <div class="type__item d-flex pos_rel xyz_start">
+          <div class="type_bg">
+            <img src="{% static 'img/type_bg.jpg' %}" class="" alt="">
+          </div>
+
+          <div class="type__wrap d-flex flex-column">
+            <h3 class="type__name pb_20 mb_25 pos_rel fz_20 fw_demi text_center">
+              Расширенная
+            </h3>
+            <ul class="type__text">
+              <li>
+                Ремонт и змена: электротехника,
+                электрика, сантехника
+              </li>
+              <li>
+                + Техническая поддержка 24/7
+              </li>
+            </ul>
+
+            <p class="type__price fz_18 fw_demi text_center">
+              2899 руб/мес
+            </p>
+            <a href="subscribe_order.php" class="btn type__btn mx-auto  mt-auto mb_30">
+            <span class="effect__bg"></span>
+              <span>
+              Оплатить
+              </span>
+              <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+                <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+              </svg>
+            </a>
+            <p class="type__max fz_18 fw_demi text_center">
+              Цена, руб/год: &nbsp; <span class="price__max fw_demi">34788</span> &nbsp; <span
+                class="price__min fw_demi">26000</span>
+            </p>
+          </div>
+
+        </div>
+        <div class="type__item d-flex pos_rel xyz_start">
+          <div class="type_bg">
+            <img src="{% static 'img/type_bg.jpg' %}" class="" alt="">
+          </div>
+
+          <div class="type__wrap d-flex flex-column">
+            <h3 class="type__name pb_20 mb_25 pos_rel fz_20 fw_demi text_center">
+              Премиум
+            </h3>
+            <ul class="type__text">
+              <li>
+                Ремонт и замена: электротехника, электрика, сантехника
+              </li>
+              <li>
+                Обслуживание дополнительного электрооборудования
+              </li>
+              <li>
+                + Техническая поддержка и обслуживание 24/7
+              </li>
+            </ul>
+            <p class="type__price fz_18 fw_demi text_center">
+              4299 руб/мес
+            </p>
+            <a href="subscribe_order.php" class="btn type__btn mx-auto mt-auto mb_30">
+            <span class="effect__bg"></span>
+              <span>
+              Оплатить
+              </span>
+              <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+                <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+              </svg>
+            </a>
+            <p class="type__max fz_18 fw_demi text_center">
+              Цена, руб/год: &nbsp; <span class="price__max fw_demi">51588</span> &nbsp; <span
+                class="price__min fw_demi">40000</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="step pt_100" xyz="fade down duration-5 stagger">
+    <div class="container">
+      <div class="row ">
+        <div class="col-lg-5">
+          <h2 class="step__title section__title mb_40 xyz_start">
+            Как начать сотрудничество?
+          </h2>
+          <ul class="step__list ">
+            <li class="xyz_start">
+              <span class="step__number">
+                1
+              </span>
+              <p>
+                Выбрать удобный тариф (вид подписки)
+              </p>
+            </li>
+            <li class="xyz_start">
+              <span class="step__number">
+                2
+              </span>
+              <p>
+                Оформить подписку на сайте
+              </p>
+            </li>
+            <li class="xyz_start">
+              <span class="step__number">
+                3
+              </span>
+              <p>
+                Наслаждаться сервисом
+              </p>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col-lg-7 pos_rel">
+          <img src="{% static 'img/step_img.png' %}" class="step__img xyz_start" alt="">
+          <div class="step__info pt_90 text_center pos_rel xyz_start">
+            <h3 class=" fz_24 fw_bold c_white step__call">
+              Взаимодействие с клиентами происходит оперативно в режиме 24/7*
+              через форму обратной связи, WhatsApp, Telegram, колл-центр.
+
+            </h3>
+            <p class="step__sale fz_20 fw_medium c_white">
+              Воспользуйтесь акционным предложением: годовая подписка дешевле!
+            </p>
+            <button class=" btn step__btn mx-auto pos_rel">
+            <span class="effect__bg"></span>
+              <span>
+                Оформить подписку
+              </span>
+              <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+                <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+              </svg>
+
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="callback"  xyz="fade down duration-5 stagger">
+    <div class="container">
+      <div class="col-lg-11 col-xl-10 mx-auto callback__wrap">
+        <div class="row">
+          <div class="col-lg-6 pos_rel xyz_start">
+            <img src="{% static 'img/callback_img.png' %}" class="callback__img" alt="">
+          </div>
+          <div class="col-lg-6 xyz_start">
+            <h2 class="section__title callback__title mb_10 text_center">
+              Остались вопросы?
+            </h2>
+            <p class="callback__subtitle text_center mb_30">
+              Звоните или оставьте заявку и мы Вам перезвоним
+            </p>
+            <div class="form__wrap form__wrap_callback">
+              <div class="input__group input__group_name">
+                <input type="text" name="name" class="order__input order__input_name" />
+                <p class="place_span">Имя</p>
+              </div>
+              <div class="input__group input__group_phone">
+                <input type="tel" name="tel656" class="order__input order__input_phone" />
+                <p class="place_span">Телефон</p>
+              </div>
+
+              <button class="btn callback__btn mx-auto pos_rel">
+              <span class="effect__bg"></span>
+                <span>
+                  Оставить заявку
+                </span>
+                <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                  <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock %}

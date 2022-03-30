@@ -1,327 +1,69 @@
 {% extends 'layout/account.html' %}
 
+{% load static %}
+
+{% block title %}Оформить / изменить подписку{% endblock %}
+
 {% block account_content %}
     <h2 class="profile__subtitle fz_22 fw_demi mb_35">
         Оформить / изменить подписку
     </h2>
-    <div class="type__row mb_30 d-flex justify-content-between flex-wrap">
-        <div class="type__item d-flex pos_rel">
-            <div class="type_bg">
-                <img src="./img/type_bg.jpg" class="" alt="">
-            </div>
-
-            <div class="type__wrap d-flex flex-column">
-
-                <label class="type__name pb_20 mb_25 pos_rel fz_20 fw_demi text_center">
-                    <span class="radio__wrap radio__wrap_type">
-                        <input type="radio" class="input__type" data-min="1199" data-max="10 000"
-                            name="type_radio" value="Стандарт">
-                    </span>
-                    Стандарт
-                </label>
-                <p>
-                    Подключение и ремонт:
-                </p>
-                <ul class="type__text">
-                    <li>
-                        Посудомоечная машина
-                    </li>
-                    <li>
-                        Электроплита
-                    </li>
-                    <li>
-                        Вытяжка
-                    </li>
-                    <li>
-                        Холодильник
-                    </li>
-                    <li>
-                        Стиральная машина
-                    </li>
-                    <li>
-                        Сушилка для одежды
-                    </li>
-                    <li>
-                        Мелкая бытовая техника (чайник,
-                        микроволновая печь, блендер,
-                        хлебопечь, тостер, утюг ит т.д.)
-                    </li>
-                </ul>
-
-                <p class="type__price fz_18 fw_demi text_center">
-                    1199 руб/мес
-                </p>
-                <p class="type__max  fw_demi text_center mt-auto">
-                    Цена, руб/год: &nbsp; <span class="price__max fw_demi">14 388</span> &nbsp; <span
-                        class="price__min fw_demi">10 000</span>
-                </p>
-            </div>
-
-        </div>
-        <div class="type__item d-flex pos_rel">
-            <div class="type_bg">
-                <img src="./img/type_bg.jpg" class="" alt="">
-            </div>
-
-            <div class="type__wrap d-flex flex-column">
-                <label class="type__name pb_20 mb_25 pos_rel fz_20 fw_demi text_center">
-                    <span class="radio__wrap radio__wrap_type">
-                        <input type="radio" checked class="input__type" data-min="2899"
-                            data-max="26 000" name="type_radio" value="Расширенная">
-                    </span>
-                    Расширенная
-                </label>
-                <p>
-                    Все услуги, согласно пакету «стандарт»
-                </p>
-                <p>
-                    + Подключение и ремонт:
-                </p>
-                <ul class="type__text">
-                    <li>
-                        Кондиционер
-                    </li>
-                    <li>
-                        Бойлер для воды
-                    </li>
-                    <li>
-                        Водонагреватели
-                    </li>
-                    <li>
-                        Устройства «Умный дом»
-                    </li>
-                </ul>
-                <p>
-                    + Монтаж, частичная замена, срочный
-                    ремонт в случаях:
-                </p>
-                <ul class="type__text">
-                    <li>
-                        Устранение протечек
-                    </li>
-                    <li>
-                        Внутренняя сантехника (частичная
-                        замена, ремонт)
-                    </li>
-                    <li>
-                        Замена электропроводки (частичная
-                        замена, ремонт)
-                    </li>
-                    <li>
-                        Замена розеток
-                    </li>
-                    <li>
-                        Замена осветительных приборов
-                        (электроламп, люстр)
-                    </li>
-                </ul>
-
-                <p class="type__price fz_18 fw_demi text_center">
-                    2899 руб/мес
-                </p>
-                <p class="type__max fw_demi text_center mt-auto">
-                    Цена, руб/год: &nbsp; <span class="price__max fw_demi">34 788</span> &nbsp; <span
-                        class="price__min fw_demi">26 000</span>
-                </p>
-            </div>
-
-        </div>
-        <div class="type__item d-flex pos_rel">
-            <div class="type_bg">
-                <img src="./img/type_bg.jpg" class="" alt="">
-            </div>
-
-            <div class="type__wrap d-flex flex-column">
-                <label class="type__name pb_20 mb_25 pos_rel fz_20 fw_demi text_center">
-                    <span class="radio__wrap radio__wrap_type">
-                        <input type="radio" class="input__type" data-min="4299" data-max="40 000"
-                            name="type_radio" value="Премиум">
-                    </span> Премиум
-                </label>
-                <p>
-                    Все услуги, согласно пакету
-                    «расширенная»
-                </p>
-                <p>
-                    + Ремонт и восстановление:
-                </p>
-                <ul class="type__text">
-                    <li>
-                        Гаражные ворота
-
-                    </li>
-                    <li>
-
-                        Обслуживание дополнительного электрооборудования
-
-                    </li>
-                    <li>
-                        Электрические ворота
-
-                    </li>
-                    <li>
-                        Септические системы (доплата)
-
-                    </li>
-                    <li>
-                        Насос скважины
-
-                    </li>
-                    <li>
-                        Насос для бассейна
-
-                    </li>
-                    <li>
-                        Уличное освещение
-
-                    </li>
-                    <li>
-                        Комплексное улучшение, обновление,
-                        модернизация сантехники
-
-                    </li>
-                </ul>
-
-                <p class="type__price fz_18 fw_demi text_center">
-                    4299 руб/мес
-                </p>
-                <p class="type__max  fw_demi text_center mt-auto">
-                    Цена, руб/год: &nbsp; <span class="price__max fw_demi">51 588</span> &nbsp; <span
-                        class="price__min fw_demi">40 000</span>
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="subscribe__long mt_20">
-        <p class="mb_20 fz_18 fw_demi">
-            Срок действия подписки
-        </p>
-        <div class="inputs__wrap mb_30">
-            <label class="d-flex align-items-center">
-                <span class="radio__wrap radio__wrap_long">
-                    <input type="radio" class="long_min long__input" name="type_value"  value="">
-                </span>
-                <span>
-                1 месяц
-                </span>
-
-            </label>
-            <label class="d-flex align-items-center">
-                <span class="radio__wrap radio__wrap_long">
-                    <input type="radio" class="long_max long__input" name="type_value" checked value="">
-                </span>
-                <span>
-                1 год
-                </span>
-
-            </label>
-
-        </div>
-        <p class="mb_30 fz_18 fw_demi">
-            Итого к оплате: <span class="sum__value"></span>
-        </p>
-        <p class="mb_30 fz_18 fw_demi">
-            Способ оплаты:
-        </p>
-        <div class="inputs__wrap mb_45 inputs__wrap_type">
-            <label class="d-flex">
-                <span class="radio__wrap radio__wrap_pay">
-                    <input type="radio" class="type__pay" checked name="type_pay" value="card">
-                </span>
-                <span>
-                Онлайн банковской картой
-                </span>
-            </label>
-            <label class="d-flex">
-                <span class="radio__wrap radio__wrap_pay">
-                    <input type="radio" class="type__pay" name="type_pay" value="other">
-                </span>
-                <span>
-                Другой (Apple Pay, SberPay,
-                Samsung Pay)
-                </span>
-
-            </label>
-        </div>
-        <div class="form__wrap form__wrap_card mx-0">
-            <div class="input__group input__group_card">
-                <input type="tel" name="name" class="order__input order__input_card" />
-                <p class="place_span">Номер карты</p>
-            </div>
-            <div class="input__group input__group_name">
-                <input type="text" name="name" class="order__input order__input_name" />
-                <p class="place_span">ФИО держателя карты</p>
-            </div>
-            <div class="short__card mb_30">
-                <div class="input__group input__group_date">
-                    <input type="tel" name="date_card" class="order__input order__input_date" />
-                    <p class="place_span">Срок действия</p>
-                </div>
-                <div class="input__group input__group_cvv">
-                    <input type="number" name="number_cvv" class="order__input order__input_cvv" />
-                    <p class="place_span">CVC код</p>
-                </div>
-                <label class="checkbox__wrap checkbox__wrap_remember d-flex align-items-center">
-                    <span class="wpcf7-form-control-wrap acceptance-750">
-                        <span class="wpcf7-form-control wpcf7-acceptance">
-                            <span class="wpcf7-list-item">
-                                <input type="checkbox" name="acceptance-751" value="1"
-                                    class="check_input">
+    <form action="." method="post">
+        <div class="type__row mb_30 d-flex justify-content-between flex-wrap">
+            {% for rate in subscribe_form.rate.field.queryset %}
+                <div class="type__item d-flex pos_rel">
+                    <div class="type_bg">
+                        <img src="{% static 'img/type_bg.jpg' %}" class="" alt="">
+                    </div>
+                    <div class="type__wrap d-flex flex-column">
+                        <label class="type__name pb_20 mb_25 pos_rel fz_20 fw_demi text_center">
+                            <span class="radio__wrap radio__wrap_type">
+                                <input type="radio" class="input__type" data-min="{{ rate.price_month }}"
+                                       data-max="{{ rate.price_year }}"
+                                       name="rate" value="{{ rate.pk }}" required>
                             </span>
-                        </span>
+                            {{ rate.title }}
+                        </label>
+                        <div class="rate-content">
+                            {{ rate.description|safe }}
+                        </div>
+                        <p class="type__price fz_18 fw_demi text_center">
+                            {{ rate.price_month }} руб/мес
+                        </p>
+                        <p class="type__max  fw_demi text_center mt-auto">
+                            Цена, руб/год: &nbsp;
+                            <span class="price__max fw_demi">{{ rate.price_year_big }}</span> &nbsp;
+                            <span class="price__min fw_demi">{{ rate.price_year }}</span>
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="subscribe__long mt_20">
+            <p class="mb_20 fz_18 fw_demi">
+                Срок действия подписки
+            </p>
+            <div class="inputs__wrap mb_30">
+                <label class="d-flex align-items-center">
+                    <span class="radio__wrap radio__wrap_long">
+                        <input type="radio" class="long_min long__input" name="period"  value="month">
                     </span>
-                    <span class="checkbox__text mb-0 fz_16">Запомнить карту
+                    <span>1 месяц</span>
+                </label>
+                <label class="d-flex align-items-center">
+                    <span class="radio__wrap radio__wrap_long">
+                        <input type="radio" class="long_max long__input" name="period" value="year">
                     </span>
+                    <span>1 год</span>
                 </label>
             </div>
-            <label class="checkbox__wrap mb_30 d-flex align-items-center justify-content-center">
-                <span class="wpcf7-form-control-wrap acceptance-750">
-                    <span class="wpcf7-form-control wpcf7-acceptance">
-                        <span class="wpcf7-list-item">
-                            <input type="checkbox" name="acceptance-751" checked value="1"
-                                class="check_input">
-                        </span>
-                    </span>
-                </span>
-                <span class="checkbox__text mb-0 fz_16">Даю согласие на обработку моих персональных данных
-                </span>
-            </label>
-            <button class="btn pay__btn pay__btn_card">
-            <span class="effect__bg"></span>
-            <span class="effect__bg"></span>
-                <span>
-                    Оплатить подписку
-                </span>
-                <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                    </path>
-                    <path d="M17 7V17H7" stroke="white" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                    </path>
-                </svg>
-            </button>
-        </div>
-        <div class="form__wrap form__wrap_other">
-            <label class="checkbox__wrap mb_30 d-flex align-items-center justify-content-center">
-                <span class="wpcf7-form-control-wrap acceptance-750">
-                    <span class="wpcf7-form-control wpcf7-acceptance">
-                        <span class="wpcf7-list-item">
-                            <input type="checkbox" name="acceptance-751" checked value="1"
-                                class="check_input">
-                        </span>
-                    </span>
-                </span>
-                <span class="checkbox__text mb-0 fz_16">Даю согласие на обработку моих персональных данных</span>
-            </label>
-            <button class="btn pay__btn pay__btn_other">
+            <p class="mb_30 fz_18 fw_demi">
+                Итого к оплате: <span class="sum__value"></span>
+            </p>
+            {% csrf_token %}
+            <button class="btn pay__btn pay__btn_other" type="submit">
                 <span class="effect__bg"></span>
-                <span>
-                    Оплатить
-                </span>
+                <span>Оплатить</span>
                 <svg class="ms-2" width="53" height="19" viewBox="0 0 53 19" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -342,5 +84,5 @@
                 </svg>
             </button>
         </div>
-    </div>
+    </form>
 {% endblock %}

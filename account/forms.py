@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from .models import Profile
 from ticket.models import Ticket
 from django.contrib.auth import authenticate
+from rate.models import Rate
 
 
 class LoginForm(forms.Form):
@@ -183,3 +184,11 @@ class TicketForm(forms.ModelForm):
     class Meta:
         model = Ticket
         fields = ('phone', 'city', 'street', 'house', 'apartment', 'subject', 'body')
+
+
+class SubscribeForm(forms.Form):
+    rate = forms.ModelChoiceField(queryset=Rate.objects.filter(status='active'),
+                                   widget=forms.RadioSelect())
+
+    class Meta:
+        fields = ('rate',)

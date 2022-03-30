@@ -15,6 +15,9 @@ class Rate(models.Model):
     def __str__(self):
         return self.title
 
+    def price_year_big(self):
+        return self.price_month * 12
+
     class Meta:
         ordering = ('price_year', 'price_month')
         verbose_name = 'Тарифный план'

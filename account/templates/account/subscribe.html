@@ -1,0 +1,61 @@
+{% extends 'layout/account.html' %}
+
+{% block title %}Мои подписки{% endblock %}
+
+{% block account_content %}
+    <h2 class="profile__subtitle fz_22 fw_demi mb_35">
+        Мои подписки
+    </h2>
+    {% if subscriptions %}
+        <div class="table__wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>№ заказа</th>
+                        <th>Дата</th>
+                        <th>Подписка</th>
+                        <th>Срок действия</th>
+                        <th>Статус</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for subscription in subscriptions %}
+                    <tr>
+                        <td>{{ subscription.pk }}</td>
+                        <td>{{ subscription.begin|date:'d.m.Y' }}</td>
+                        <td>{{ subscription.title }}</td>
+                        <td>до {{ subscription.end|date:'d.m.Y' }}<br>
+                            {% if subscription.paid and subscription.status == 'active' %}
+                                (осталось {{ subscription.days_left }}д.)
+                            {% endif %}
+                        </td>
+                        <td>{{ subscription.status_verbose }}<br>
+                            {% if subscription.status == 'active' %}
+                                <a href="{% url 'subscribe_add' %}">Изменить</a>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if subscription.status == 'active' %}
+                                <button class="table__btn">
+                                    <span>Отписаться</span>
+                                    <svg class="ms-2" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.9585 4.9585L12.0418 12.0418" stroke="#0A153D"
+                                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M12.0418 4.9585V12.0418H4.9585" stroke="#0A153D"
+                                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% include 'partials/pagination.html' with page=subscriptions %}
+    {% else %}
+        <p class="none__info">У Вас еще нет подписок</p>
+    {% endif %}
+{% endblock %}

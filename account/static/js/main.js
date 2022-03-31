@@ -388,8 +388,8 @@ const inputType = document.querySelectorAll('.input__type');
 
 const wrapLonge = document.querySelectorAll('.radio__wrap_long');
 const longInput = document.querySelectorAll('.long__input');
-const longMin = document.querySelector('.long_min');
-const longMax = document.querySelector('.long_max');
+const longMin = document.querySelector('.long__input[value="month"]');
+const longMax = document.querySelector('.long__input[value="year"]');
 
 const wrapPay = document.querySelectorAll('.radio__wrap_pay');
 const typePay = document.querySelectorAll('.type__pay');
@@ -458,17 +458,17 @@ typePay.forEach((el, idx) => {
 });
 
 function checkElem(element) {
-  longMin.value = element.dataset.min;
-  longMax.value = element.dataset.max;
+  $(longMin).attr('data-value', element.dataset.min);
+  $(longMax).attr('data-value', element.dataset.max);
   resultVal();
 }
 
 function resultVal() {
-  if (longMin.checked) {
-    document.querySelector('.sum__value').innerHTML = `${longMin.value}руб`;
+  if (longMin.checked && $(longMin).attr('data-value')) {
+    document.querySelector('.sum__value').innerHTML = `${$(longMin).attr('data-value')}руб`;
   }
-  if (longMax.checked) {
-    document.querySelector('.sum__value').innerHTML = `${longMax.value}руб`;
+  if (longMax.checked && $(longMax).attr('data-value')) {
+    document.querySelector('.sum__value').innerHTML = `${$(longMax).attr('data-value')}руб`;
   }
 }
 

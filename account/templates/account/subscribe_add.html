@@ -5,22 +5,21 @@
 {% block title %}Оформить / изменить подписку{% endblock %}
 
 {% block account_content %}
-    <h2 class="profile__subtitle fz_22 fw_demi mb_35">
-        Оформить / изменить подписку
-    </h2>
+    <h2 class="profile__subtitle fz_22 fw_demi mb_35">Оформить / изменить подписку</h2>
     <form action="." method="post">
+        {% include 'partials/form_messages.html' %}
         <div class="type__row mb_30 d-flex justify-content-between flex-wrap">
             {% for rate in subscribe_form.rate.field.queryset %}
                 <div class="type__item d-flex pos_rel">
-                    <div class="type_bg">
-                        <img src="{% static 'img/type_bg.jpg' %}" class="" alt="">
-                    </div>
+                    <div class="type_bg"><img src="{% static 'img/type_bg.jpg' %}"></div>
                     <div class="type__wrap d-flex flex-column">
                         <label class="type__name pb_20 mb_25 pos_rel fz_20 fw_demi text_center">
                             <span class="radio__wrap radio__wrap_type">
                                 <input type="radio" class="input__type" data-min="{{ rate.price_month }}"
                                        data-max="{{ rate.price_year }}"
-                                       name="rate" value="{{ rate.pk }}" required>
+                                       name="rate" value="{{ rate.pk }}" required
+                                       data-checked="{{ subscribe_form.rate.value }}"
+                                       {% if subscribe_form.rate.value == rate.pk|slugify  %} checked{% endif %}>
                             </span>
                             {{ rate.title }}
                         </label>
@@ -40,26 +39,16 @@
             {% endfor %}
         </div>
         <div class="subscribe__long mt_20">
-            <p class="mb_20 fz_18 fw_demi">
-                Срок действия подписки
-            </p>
+            <p class="mb_20 fz_18 fw_demi">Срок действия подписки</p>
             <div class="inputs__wrap mb_30">
-                <label class="d-flex align-items-center">
-                    <span class="radio__wrap radio__wrap_long">
-                        <input type="radio" class="long_min long__input" name="period"  value="month">
-                    </span>
-                    <span>1 месяц</span>
-                </label>
-                <label class="d-flex align-items-center">
-                    <span class="radio__wrap radio__wrap_long">
-                        <input type="radio" class="long_max long__input" name="period" value="year">
-                    </span>
-                    <span>1 год</span>
-                </label>
+                {% for p in subscribe_form.period %}
+                    <label class="d-flex align-items-center">
+                        <span class="radio__wrap radio__wrap_long">{{ p.tag }}</span>
+                        <span>{{ p.choice_label }}</span>
+                    </label>
+                {% endfor %}
             </div>
-            <p class="mb_30 fz_18 fw_demi">
-                Итого к оплате: <span class="sum__value"></span>
-            </p>
+            <p class="mb_30 fz_18 fw_demi">Итого к оплате: <span class="sum__value"></span></p>
             {% csrf_token %}
             <button class="btn pay__btn pay__btn_other" type="submit">
                 <span class="effect__bg"></span>

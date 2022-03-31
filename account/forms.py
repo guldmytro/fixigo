@@ -4,6 +4,7 @@ from .models import Profile
 from ticket.models import Ticket
 from django.contrib.auth import authenticate
 from rate.models import Rate
+from .models import Subscription
 
 
 class LoginForm(forms.Form):
@@ -188,7 +189,13 @@ class TicketForm(forms.ModelForm):
 
 class SubscribeForm(forms.Form):
     rate = forms.ModelChoiceField(queryset=Rate.objects.filter(status='active'),
-                                   widget=forms.RadioSelect())
-
+                                  widget=forms.RadioSelect())
+    period = forms.ChoiceField(choices=Subscription.TIME_CHOICES,
+                               widget=forms.RadioSelect(
+                                   attrs={
+                                       'class': 'long__input'
+                                   }
+                               ))
+    
     class Meta:
-        fields = ('rate',)
+        fields = ('rate', 'period',)

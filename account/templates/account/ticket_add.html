@@ -3,9 +3,7 @@
 {% block title %}Добавить заявку{% endblock %}
 
 {% block account_content %}
-    <h2 class="profile__subtitle fz_22 fw_demi mb_35">
-        Новая заявка
-    </h2>
+    <h2 class="profile__subtitle fz_22 fw_demi mb_35">Новая заявка</h2>
     <form method="post" action="." class="form__wrap form__wrap_registration mx-0">
         {% include 'partials/form_messages.html' %}
         <div class="input__group input__group_phone">
@@ -46,9 +44,7 @@
         {% csrf_token %}
         <button type="submit" class="btn enter__btn mb_30">
             <span class="effect__bg"></span>
-            <span>
-                Отправить
-            </span>
+            <span>Отправить</span>
             <svg class="ms-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 7L17 17" stroke="white" stroke-width="2" stroke-linecap="round"

@@ -278,8 +278,26 @@ def subscribe_list(request):
 
 @login_required
 def subscribe_add(request):
-    subscribe_form = forms.SubscribeForm()
-    rates = Rate.objects.filter(status='active')
+    if request.method == 'POST':
+        subscribe_form = forms.SubscribeForm(request.POST)
+        if subscribe_form.is_valid():
+            cd = subscribe_form.cleaned_data
+            subscribtion = Subscription()
+            rate = cd['rate']
+            subscribtion.title = rate.title
+            subscribtion.timedelta = cd['period']
+            if cd['period'] == 'month':
+                subscribtion.price = rate.price_month
+            else:
+                subscribtion.price = rate.price_year
+            subscribtion.profile = request.user.profile
+            subscribtion.paid = False
+            subscribtion.status = 'waiting_for_pay'
+            subscribtion.save()
+        else:
+            messages.error(request, 'Выберите тарифный план и срок из списка')
+    else:
+        subscribe_form = forms.SubscribeForm()
     breadcrumbs = [
         {
             'link': reverse('subscribe_list'),
@@ -292,7 +310,6 @@ def subscribe_add(request):
     ]
     context = {
         'subscribe_form': subscribe_form,
-        'rates': rates,
         'breadcrumbs': breadcrumbs,
         'section': 'subscribe',
     }

@@ -9,7 +9,8 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.urls import reverse
 from .models import Subscription
-from rate.models import Rate
+import requests
+from .utils import register_order
 
 
 def user_login(request):
@@ -278,6 +279,7 @@ def subscribe_list(request):
 
 @login_required
 def subscribe_add(request):
+
     if request.method == 'POST':
         subscribe_form = forms.SubscribeForm(request.POST)
         if subscribe_form.is_valid():
@@ -294,6 +296,8 @@ def subscribe_add(request):
             subscribtion.paid = False
             subscribtion.status = 'waiting_for_pay'
             subscribtion.save()
+            # register_order(subscribtion.price)
+            # ...
         else:
             messages.error(request, 'Выберите тарифный план и срок из списка')
     else:
